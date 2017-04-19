@@ -1,0 +1,3 @@
+[submodule "src/frameworks/tinytypo"]
+	path = src/frameworks/tinytypo
+	url = https://github.com/mistergraphx/tinytypo.git

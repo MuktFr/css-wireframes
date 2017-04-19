@@ -1,9 +1,4 @@
 @charset "UTF-8";
-/**
- * CSS Wireframes
- * @author Les Développements Durables
- **/
-/* Externals frameworks */
 /* # Tiny Typo
    
 (c) 2010-2014 Tiny Typo v1.3.4 - MIT License - tinytypo.tetue.net
@@ -909,15 +904,5 @@ Styleguide tinytypo.print
 
   abbr[title]:after {
     content: " (" attr(title) ")"; } }
-/* Modules */
-.wf-dummy-text {
-  /**
-   * Generate block words
-   * Load a font to transform all characters in a filled block
-   **/
-  /**
-   * Generate block lines
-   * Must be apply only on inline elements
-   **/ }
 
-/*# sourceMappingURL=wireframes.css.map */
+/*# sourceMappingURL=tinytypo.css.map */
