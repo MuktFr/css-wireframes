@@ -910,6 +910,7 @@ Styleguide tinytypo.print
   abbr[title]:after {
     content: " (" attr(title) ")"; } }
 /* Modules */
+/* Not readable texts, just for the grey */
 .wf-dummy-text {
   /**
    * Generate block words
@@ -919,5 +920,13 @@ Styleguide tinytypo.print
    * Generate block lines
    * Must be apply only on inline elements
    **/ }
+  .wf-dummy-text--words {
+    font-family: 'blokkneue', cursive;
+    line-height: 1;
+    word-spacing: -1em;
+    letter-spacing: -0.066em; }
+  .wf-dummy-text--lines {
+    background-color: #818898;
+    color: transparent; }
 
 /*# sourceMappingURL=wireframes.css.map */

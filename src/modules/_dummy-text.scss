@@ -1,17 +1,22 @@
 
+/* Not readable texts, just for the grey */
 .wf-dummy-text {
 	/**
 	 * Generate block words
 	 * Load a font to transform all characters in a filled block
 	 **/
 	&--words {
-		
+		font-family: 'blokkneue', cursive;
+		line-height: 1;
+		word-spacing: -1em;
+		letter-spacing: -0.066em;
 	}
 	/**
 	 * Generate block lines
 	 * Must be apply only on inline elements
 	 **/
 	&--lines {
-		
+		background-color: #818898;
+		color: transparent;
 	}
 }
