@@ -1,9 +1,40 @@
 /**
- * Notes
+ * Note
  *
- * Notes styled as post-it
- * They must positioned relatively to a container, .wf-blocks for instance
+ * Use notes to add remarks about the wireframe elements.
+ *
+ * They are positionned relatively to the element you are commenting (.wf-block for instance),
+ * and can be placed at various positions (on the corners, on the sides, etc.).
+ * By default, a note is positionned ([FIXME] yet to be defined),
+ *
+ * @example
+ *		<div class="wf-block">
+ *			<span class="wf-note wf-note--top-right">Something worth mentioning about this block</span>
+ *		</div>
  */
-.wf-notes {
-	
+.wf-note {
+	&--left {
+		
+	}
+	&--top {
+		
+	}
+	&--right {
+		
+	}
+	&--bottom {
+		
+	}
+	&--top-left {
+		
+	}
+	&--top-right {
+		
+	}
+	&--bottom-right {
+		
+	}
+	&--bottom-left {
+		
+	}
 }
