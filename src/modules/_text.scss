@@ -1,0 +1,32 @@
+
+/* Not readable texts, just for the grey */
+.wf-text {
+	/**
+	 * Generate block lines
+	 * Must be apply only on inline elements
+	 * @example
+	 * 		<p><span class="wf-text-lines">Some text</span></p>
+	 **/
+	&-lines {
+		background-color: $color-text;
+		color: transparent;
+		
+		&.wf-text--important {
+			background-color: $color-important;
+		}
+	}
+	
+	/**
+	 * Generate block words
+	 * Load a font to transform all characters in a filled block
+	 * @example
+	 * 		<div class="wf-text-words"><p>Some text</p><p>Other thing</p></div>
+	 **/
+	&-words {
+		font-family: 'blokkneue', cursive;
+		
+		&.wf-text--important {
+			color: $color-important;
+		}
+	}
+}

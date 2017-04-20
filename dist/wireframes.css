@@ -3,6 +3,8 @@
  * CSS Wireframes
  * @author Les Développements Durables
  **/
+/* Variables */
+/* Color palette */
 /* Externals frameworks */
 /* # Tiny Typo
    
@@ -510,19 +512,18 @@ table {
     overflow-y: hidden;
     overflow-x: scroll;
     margin-bottom: 1.5em; }
-
   .table-responsive table {
     width: 100%;
     margin-bottom: 0; }
-
   .table-responsive thead, .table-responsive tbody, .table-responsive tfoot, .table-responsive tr, .table-responsive th, .table-responsive td {
     white-space: nowrap; } }
+
 /* Quotes, code and poetry */
 q {
   quotes: "\201C" "\201D" "\2018" "\2019"; }
 
 :lang(en) > q {
-  quotes: "“" "”" "‘" "’"; }
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
 
 :lang(fr) > q {
   quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D" "\2018" "\2019"; }
@@ -534,10 +535,10 @@ q {
   quotes: "\00AB\A0" "\A0\00BB" "\201C" "\201D"; }
 
 :lang(de) > q {
-  quotes: "»" "«" "›" "‹"; }
+  quotes: "\00BB" "\00AB" "\203A" "\2039"; }
 
 :lang(no) > q {
-  quotes: "« " " »" "‹" "›"; }
+  quotes: "\00AB\A0" "\A0\00BB" "\2039" "\203A"; }
 
 /* [en] http://en.wikipedia.org/wiki/International_variation_in_quotation_marks */
 q:before {
@@ -604,17 +605,17 @@ var {
 @media print {
   .box {
     border: 1px solid !important; } }
+
 @media screen and (min-width: 640px) {
   .box.right {
     width: 33%;
     margin-left: 1.5em; }
-
   .box.left {
     width: 33%;
     margin-right: 1.5em; }
-
   .box.center {
     width: 75%; } }
+
 /* Paragraphs */
 p, .p, ul, ol, dl, dd, blockquote, address, pre, .table, fieldset {
   margin-bottom: 1.5em; }
@@ -628,16 +629,16 @@ p, .p, ul, ol, dl, dd, blockquote, address, pre, .table, fieldset {
 @media screen and (max-width: 640px) {
   img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video {
     max-width: 100% !important; }
-
   textarea, table, td, th, pre, code, samp {
     word-wrap: break-word; }
-
   pre, code, samp {
     white-space: pre-line; } }
+
 /* orientation iOS5 font-size fix */
 @media screen and (orientation: landscape) and (max-device-width: 640px) {
   html, body {
     -webkit-text-size-adjust: 100%; } }
+
 /* # Hyperlinks
    
 (c) 2010-2014 Tiny Typo v1.3.4 - MIT License - tinytypo.tetue.net
@@ -688,27 +689,27 @@ a[hreflang]:after {
 
 /* External Links */
 a.external:after {
-  content: " ➚"; }
+  content: "\0000a0\279A"; }
 
 a[hreflang].external:after {
   content: " [" attr(hreflang) "] ➚"; }
 
 /* mailto / tel */
 a.mailto:after {
-  content: " ✉"; }
+  content: "\0000a0\2709"; }
 
 a.tel:after {
-  content: " ✆"; }
+  content: "\0000a0\2706"; }
 
 /* Documents */
 a.download:after {
-  content: " ↧"; }
+  content: "\0000a0\21A7"; }
 
 a[hreflang].download:after {
   content: " [" attr(hreflang) "] ↧"; }
 
 a.audio:after {
-  content: " ♫"; }
+  content: "\0000a0\266B"; }
 
 a[hreflang].audio:after {
   content: " [" attr(hreflang) "] ♫"; }
@@ -729,20 +730,17 @@ a:active img {
   a,
   a:visited {
     text-decoration: underline; }
-
   a:after {
-    content: ""; }
-
+    content: ''; }
   a[rel="external"]:after,
   a.external:after {
     content: " (" attr(href) ")"; }
-
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
-    content: ""; }
-
+    content: ''; }
   /* Don't show links for images, or javascript/internal links */ }
+
 /* # Illustrations, images and albums
    
 (c) 2010-2014 Tiny Typo v1.3.4 - MIT License - tinytypo.tetue.net
@@ -838,14 +836,13 @@ figure.right {
 @media screen and (max-width: 640px) {
   figure {
     margin-bottom: 1.5em; }
-
   figure.left {
     float: none;
     margin-right: 0; }
-
   figure.right {
     float: none;
     margin-left: 0; } }
+
 /* album */
 .album {
   margin-bottom: 1.5em; }
@@ -882,51 +879,55 @@ Styleguide tinytypo.print
     color: #000 !important;
     background: transparent !important;
     box-shadow: none !important; }
-
   img {
     max-width: 100% !important; }
-
   pre, blockquote {
     page-break-inside: avoid; }
-
   thead {
     display: table-header-group; }
-
   tr, img {
     page-break-inside: avoid; }
-
   @page {
     margin: 2cm .5cm; }
   p, h2, h3 {
     orphans: 3;
     widows: 3; }
-
   h2, h3 {
     page-break-after: avoid; }
-
   abbr[title] {
     border-bottom: 0; }
-
   abbr[title]:after {
     content: " (" attr(title) ")"; } }
+
+/* Base */
+body {
+  color: #818898; }
+
+a {
+  color: #818898;
+  text-decoration: underline; }
+
 /* Modules */
 /* Not readable texts, just for the grey */
-.wf-dummy-text {
+.wf-text {
   /**
-   * Generate block words
-   * Load a font to transform all characters in a filled block
-   **/
+	 * Generate block lines
+	 * Must be apply only on inline elements
+	 * @example
+	 * 		<p><span class="wf-text-lines">Some text</span></p>
+	 **/
   /**
-   * Generate block lines
-   * Must be apply only on inline elements
-   **/ }
-  .wf-dummy-text--words {
-    font-family: 'blokkneue', cursive;
-    line-height: 1;
-    word-spacing: -1em;
-    letter-spacing: -0.066em; }
-  .wf-dummy-text--lines {
+	 * Generate block words
+	 * Load a font to transform all characters in a filled block
+	 * @example
+	 * 		<div class="wf-text-words"><p>Some text</p><p>Other thing</p></div>
+	 **/ }
+  .wf-text-lines {
     background-color: #818898;
     color: transparent; }
-
-/*# sourceMappingURL=wireframes.css.map */
+    .wf-text-lines.wf-text--important {
+      background-color: black; }
+  .wf-text-words {
+    font-family: 'blokkneue', cursive; }
+    .wf-text-words.wf-text--important {
+      color: black; }

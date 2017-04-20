@@ -4,9 +4,15 @@
  * @author Les Développements Durables
  **/
 
+/* Variables */
+@import "variables.scss";
+
 /* Externals frameworks */
 @import "frameworks/tinytypo/scss/tinytypo"; // Reset & Typographic base
 
+/* Base */
+@import "base";
+
 /* Modules */
-@import "modules/colors"; // Palette and classes to color block background
-@import "modules/dummy-text"; // Create pseudo text with block characters
+@import "modules/text"; // Create pseudo text with block characters
+@import "modules/blocks"; // Manage wireframe blocks
