@@ -16,7 +16,7 @@ gulp.task('default', function() {
 // - 2. Add autoprefixes to CSS
 // - 3. Minify the CSS
 gulp.task('watch', function() {
-    gulp.watch('./src/*', ['sass', 'autoprefixer', 'minify']);
+    gulp.watch('./src/**', ['sass', 'autoprefixer', 'minify']);
 });
 
 // Task : compile the main SASS file to CSS
