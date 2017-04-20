@@ -5,7 +5,7 @@
  *
  * They are positionned relatively to the element you are commenting (.wf-block for instance),
  * and can be placed at various positions (on the corners, on the sides, etc.).
- * By default, a note is positionned ([FIXME] yet to be defined),
+ * By default, a note is positionned top right,
  *
  * @example
  *		<div class="wf-block">
@@ -13,6 +13,58 @@
  *		</div>
  */
 .wf-note {
+	@include wf-border;
+	background-color: white;
+	display: block;
+	padding: 1em;
+	font-size: 0.8em;
+	position: absolute;
+	top: -1em;
+	right: -1em;
+	transform: rotate(5deg);
+	z-index: 100;
+	
+	// Decoration 
+	&:before {
+		content: '';
+		position: absolute;
+		background-color: white;
+		top: -2px;
+		right: -2px;
+		width: 1em;
+		height: 1em;
+	}
+	&:after {
+		content: '';
+		position: absolute;
+		top: -1px;
+		right: -1px;
+		border-top: 1em solid white;
+		border-left: 1em solid $color-default;
+		width: 0;
+	}
+	
+	&--top-left {
+		right: auto;
+		left: -1em;
+		transform: rotate(-5deg);
+	}
+	// Already default 
+	&--top-right {
+		
+	}
+	&--bottom-left {
+		top: auto;
+		right: auto;
+		left: -1em;
+		bottom: -1em;
+		transform: rotate(-5deg);
+	}
+	&--bottom-right {
+		top: auto;
+		bottom: -1em;
+	}
+	// Mof 
 	&--left {
 		
 	}
@@ -23,18 +75,6 @@
 		
 	}
 	&--bottom {
-		
-	}
-	&--top-left {
-		
-	}
-	&--top-right {
-		
-	}
-	&--bottom-right {
-		
-	}
-	&--bottom-left {
 		
 	}
 }
