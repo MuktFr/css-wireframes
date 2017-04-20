@@ -5,5 +5,27 @@
  * 		<div class="wf-block wf-block--important wf-block--filled wf-block--color-red">
  **/ 
 .wf-block {
+	border: 1px solid $color-default;
+	padding: 1rem;
 	
+	/**
+	 * Put diagonals inside the block
+	 */
+	.wf-block--filled {
+		
+	}
+	
+	/**
+	 * Make borders more visible
+	 */
+	.wf-block--important {
+		
+	}
+	
+	/**
+	 * Put a red background
+	 */
+	.wf-block--color-red {
+		
+	}
 }
