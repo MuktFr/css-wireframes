@@ -899,6 +899,13 @@ Styleguide tinytypo.print
   abbr[title]:after {
     content: " (" attr(title) ")"; } }
 
+/* Mixins */
+/**
+ * Mixins
+ */
+/**
+ * Add a border
+ **/
 /* Base */
 body {
   color: #818898; }
@@ -931,3 +938,68 @@ a {
     font-family: 'blokkneue', cursive; }
     .wf-text-words.wf-text--important {
       color: black; }
+
+/**
+ * Manage wireframe blocks
+ * @example
+ * 		<div class="wf-block wf-block--important wf-block--filled wf-block--color-red">
+ **/
+.wf-block {
+  border: 1px solid #818898;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  /**
+	 * Take all the place
+	 */
+  /**
+	 * Put diagonals inside the block
+	 */
+  /**
+	 * Make borders more visible
+	 */
+  /**
+	 * Put a red background
+	 */ }
+  .wf-block--fluid {
+    width: 100%;
+    height: 100%; }
+
+/**
+ * Note
+ *
+ * Use notes to add remarks about the wireframe elements.
+ *
+ * They are positionned relatively to the element you are commenting (.wf-block for instance),
+ * and can be placed at various positions (on the corners, on the sides, etc.).
+ * By default, a note is positionned ([FIXME] yet to be defined),
+ *
+ * @example
+ *		<div class="wf-block">
+ *			<span class="wf-note wf-note--top-right">Something worth mentioning about this block</span>
+ *		</div>
+ */
+/**
+ * Media
+ *
+ * Module used to display different types of medias : images, videos, and such.
+ *
+ * It must be applied on an <img> tag with the ones provided in the images/ folder.
+ * They are tiny transparent images with different ratios, the naming convention is ratio-[ratio].png.
+ * Ratios are : 1-1, 4-3, 16-9, etc. (plus their counterpart : 3-4, 9-16, etc.).
+ *
+ * So to recap : choose an image according to its ratio, put a width, and its height will be deducted.
+ *
+ * @example
+ *		<img src="images/ratio-16-9.png" width=100 class="wf-media wf-media--video wf-media--dark">
+ */
+.wf-media {
+  border: 1px solid #818898;
+  /**
+	 * Dark media variant
+	 */
+  /**
+	 * Video media variant
+	 */
+  /**
+	 * Audio media variant
+	 */ }

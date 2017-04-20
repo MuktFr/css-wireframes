@@ -1,0 +1,11 @@
+/**
+ * Mixins
+ */
+
+/**
+ * Add a border
+ *
+ **/ 
+@mixin wf-border($width: 1px) {
+	border: #{$width} solid $color-default;
+}
