@@ -906,6 +906,9 @@ Styleguide tinytypo.print
  * Add a border
  *
  **/
+/**
+ * Add a diagonal background image
+ */
 /* Fonts */
 @font-face {
   font-family: 'blokkneue';
@@ -929,6 +932,8 @@ a {
  */
 .wf-margin {
   /* large variant */ }
+  .wf-margin--all {
+    margin: 1rem; }
   .wf-margin--left {
     margin-left: 1rem; }
   .wf-margin--top {
@@ -937,6 +942,8 @@ a {
     margin-right: 1rem; }
   .wf-margin--bottom {
     margin-bottom: 1rem; }
+  .wf-margin--large.wf-margin--all {
+    margin: 2rem; }
   .wf-margin--large.wf-margin--left {
     margin-left: 2rem; }
   .wf-margin--large.wf-margin--top {
@@ -986,6 +993,22 @@ a {
   padding: 1rem 1rem;
   margin-bottom: 1rem;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /**
+	 * Block label
+	 */
   /**
 	 * Take all the place
 	 */
@@ -999,27 +1022,54 @@ a {
 	 * Put a red background
 	 */
   /**
-	 * Put a red background
+	 * Put a green background
 	 */
   /**
-	 * Put a red background
+	 * Put a yellow background
 	 */
   /**
-	 * Put a red background
+	 * Put a pink background
 	 */ }
+  .wf-block > * {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+  .wf-block__label {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin: 0 auto;
+    padding: 0.5rem 0.5rem;
+    background-color: inherit; }
   .wf-block--fluid {
     width: 100%;
     height: 100%; }
   .wf-block--crossed {
-    background: linear-gradient(to top left, rgba(103, 111, 126, 0) 0%, rgba(103, 111, 126, 0) calc(50% - 0.8px), #676f7e 50%, rgba(103, 111, 126, 0) calc(50% + 0.8px), rgba(103, 111, 126, 0) 100%), linear-gradient(to top right, rgba(103, 111, 126, 0) 0%, rgba(103, 111, 126, 0) calc(50% - 0.8px), #676f7e 50%, rgba(103, 111, 126, 0) calc(50% + 0.8px), rgba(103, 111, 126, 0) 100%); }
+    background-image: linear-gradient(to top left, rgba(103, 111, 126, 0) 0%, rgba(103, 111, 126, 0) calc(50% - 0.8px), #676f7e 50%, rgba(103, 111, 126, 0) calc(50% + 0.8px), rgba(103, 111, 126, 0) 100%), linear-gradient(to top right, rgba(103, 111, 126, 0) 0%, rgba(103, 111, 126, 0) calc(50% - 0.8px), #676f7e 50%, rgba(103, 111, 126, 0) calc(50% + 0.8px), rgba(103, 111, 126, 0) 100%); }
   .wf-block--color-red {
     background-color: #FF796B; }
+    .wf-block--color-red.wf-block--crossed {
+      background-image: linear-gradient(to top left, rgba(209, 20, 0, 0) 0%, rgba(209, 20, 0, 0) calc(50% - 0.8px), #d11400 50%, rgba(209, 20, 0, 0) calc(50% + 0.8px), rgba(209, 20, 0, 0) 100%), linear-gradient(to top right, rgba(209, 20, 0, 0) 0%, rgba(209, 20, 0, 0) calc(50% - 0.8px), #d11400 50%, rgba(209, 20, 0, 0) calc(50% + 0.8px), rgba(209, 20, 0, 0) 100%); }
+    .wf-block--color-red .wf-block__label {
+      color: #6b0a00; }
   .wf-block--color-green {
     background-color: #5CDD5C; }
+    .wf-block--color-green.wf-block--crossed {
+      background-image: linear-gradient(to top left, rgba(28, 132, 28, 0) 0%, rgba(28, 132, 28, 0) calc(50% - 0.8px), #1c841c 50%, rgba(28, 132, 28, 0) calc(50% + 0.8px), rgba(28, 132, 28, 0) 100%), linear-gradient(to top right, rgba(28, 132, 28, 0) 0%, rgba(28, 132, 28, 0) calc(50% - 0.8px), #1c841c 50%, rgba(28, 132, 28, 0) calc(50% + 0.8px), rgba(28, 132, 28, 0) 100%); }
+    .wf-block--color-green .wf-block__label {
+      color: #0a300a; }
   .wf-block--color-yellow {
     background-color: #FFAE6B; }
+    .wf-block--color-yellow.wf-block--crossed {
+      background-image: linear-gradient(to top left, rgba(209, 95, 0, 0) 0%, rgba(209, 95, 0, 0) calc(50% - 0.8px), #d15f00 50%, rgba(209, 95, 0, 0) calc(50% + 0.8px), rgba(209, 95, 0, 0) 100%), linear-gradient(to top right, rgba(209, 95, 0, 0) 0%, rgba(209, 95, 0, 0) calc(50% - 0.8px), #d15f00 50%, rgba(209, 95, 0, 0) calc(50% + 0.8px), rgba(209, 95, 0, 0) 100%); }
+    .wf-block--color-yellow .wf-block__label {
+      color: #6b3000; }
   .wf-block--color-pink {
     background-color: #DD5CA5; }
+    .wf-block--color-pink.wf-block--crossed {
+      background-image: linear-gradient(to top left, rgba(132, 28, 87, 0) 0%, rgba(132, 28, 87, 0) calc(50% - 0.8px), #841c57 50%, rgba(132, 28, 87, 0) calc(50% + 0.8px), rgba(132, 28, 87, 0) 100%), linear-gradient(to top right, rgba(132, 28, 87, 0) 0%, rgba(132, 28, 87, 0) calc(50% - 0.8px), #841c57 50%, rgba(132, 28, 87, 0) calc(50% + 0.8px), rgba(132, 28, 87, 0) 100%); }
+    .wf-block--color-pink .wf-block__label {
+      color: #300a20; }
 
 /**
  * Note
