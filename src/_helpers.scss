@@ -2,38 +2,44 @@
  * Margins
  *
  * Add margins to any block
+ *
+ * @example
+ *		<div class="wf-block wf-margin--all"></div>
+ *		<div class="wf-block wf-margin--left"></div>
+ *		<div class="wf-block wf-margin--left-large wf-margin--right"></div>
+ *
+ * @note
+ * We specifically add .wf-block to ensure .wf-margin has priority
  */
-.wf-margin {
+.wf-margin,
+.wf-block.wf-margin {
 	&--all {
-		margin: $gutter-horizontal;
+		margin: $gutter-horizontal $gutter-vertical;
+		&-large {
+			margin: $gutter-horizontal * 2 $gutter-vertical * 2;
+		}
 	}
 	&--left {
 		margin-left: $gutter-horizontal;
+		&-large {
+			margin-left: $gutter-horizontal * 2;
+		}
 	}
 	&--top {
 		margin-top: $gutter-vertical;
+		&-large {
+			margin-top: $gutter-vertical * 2;
+		}
 	}
 	&--right {
 		margin-right: $gutter-horizontal;
+		&-large {
+			margin-right: $gutter-horizontal * 2;
+		}
 	}
 	&--bottom {
 		margin-bottom: $gutter-vertical;
-	}
-	/* large variant */
-	&--large {
-		&.wf-margin--all {
-			margin: $gutter-horizontal * 2;
-		}
-		&.wf-margin--left {
-			margin-left: $gutter-horizontal * 2;
-		}
-		&.wf-margin--top {
-			margin-top: $gutter-vertical  * 2;
-		}
-		&.wf-margin--right {
-			margin-right: $gutter-horizontal * 2;
-		}
-		&.wf-margin--bottom {
+		&-large {
 			margin-bottom: $gutter-vertical * 2;
 		}
 	}
