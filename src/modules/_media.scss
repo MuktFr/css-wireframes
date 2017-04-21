@@ -15,7 +15,7 @@
 .wf-media {
 
 	border: 1px solid $color-default;
-	background-image: url('../src/images/media-image-dark.svg');
+	background-image: url('../../src/images/media-image-dark.svg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 60%;
@@ -24,14 +24,14 @@
 	 * Video media variant
 	 */
 	&--video {
-		background-image: url('../src/images/media-video-dark.svg');
+		background-image: url('../../src/images/media-video-dark.svg');
 	}
 
 	/**
 	 * Audio media variant
 	 */
 	&--audio {
-		background-image: url('../src/images/media-audio-dark.svg');
+		background-image: url('../../src/images/media-audio-dark.svg');
 	}
 
 	/**
@@ -39,12 +39,12 @@
 	 */
 	&--dark {
 		background-color: $color-default;
-		background-image: url('../src/images/media-image-light.svg');
+		background-image: url('../../src/images/media-image-light.svg');
 		&.wf-media--video {
-			background-image: url('../src/images/media-video-light.svg');
+			background-image: url('../../src/images/media-video-light.svg');
 		}
 		&.wf-media--audio {
-			background-image: url('../src/images/media-audio-light.svg');
+			background-image: url('../../src/images/media-audio-light.svg');
 		}
 	}
 

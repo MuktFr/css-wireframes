@@ -72,7 +72,7 @@ gulp.task('minify-js', function() {
 
 // Task : create sourcemaps for the compiled CSS
 gulp.task('sourcemaps', function() {
-    return gulp.src('./dist/css/*')
+    return gulp.src('./dist/css/*.css')
         .pipe(sourcemaps.init())
         .pipe(sourcemaps.write('.'))
 				.pipe(gulp.dest('./dist/css'));
