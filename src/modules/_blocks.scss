@@ -48,6 +48,24 @@
 	 * Put a red background
 	 */
 	&--color-red {
-		background-color: red;
+		background-color: $color-red;
+	}
+	/**
+	 * Put a red background
+	 */
+	&--color-green {
+		background-color: $color-green;
+	}
+	/**
+	 * Put a red background
+	 */
+	&--color-yellow {
+		background-color: $color-yellow;
+	}
+	/**
+	 * Put a red background
+	 */
+	&--color-pink {
+		background-color: $color-pink;
 	}
 }

@@ -5,6 +5,7 @@
  **/
 /* Variables */
 /* Color palette */
+/* Functional palette */
 /* Gutters */
 /* Externals frameworks */
 /* # Tiny Typo
@@ -996,6 +997,15 @@ a {
 	 */
   /**
 	 * Put a red background
+	 */
+  /**
+	 * Put a red background
+	 */
+  /**
+	 * Put a red background
+	 */
+  /**
+	 * Put a red background
 	 */ }
   .wf-block--fluid {
     width: 100%;
@@ -1003,7 +1013,13 @@ a {
   .wf-block--crossed {
     background: linear-gradient(to top left, rgba(103, 111, 126, 0) 0%, rgba(103, 111, 126, 0) calc(50% - 0.8px), #676f7e 50%, rgba(103, 111, 126, 0) calc(50% + 0.8px), rgba(103, 111, 126, 0) 100%), linear-gradient(to top right, rgba(103, 111, 126, 0) 0%, rgba(103, 111, 126, 0) calc(50% - 0.8px), #676f7e 50%, rgba(103, 111, 126, 0) calc(50% + 0.8px), rgba(103, 111, 126, 0) 100%); }
   .wf-block--color-red {
-    background-color: red; }
+    background-color: #FF796B; }
+  .wf-block--color-green {
+    background-color: #5CDD5C; }
+  .wf-block--color-yellow {
+    background-color: #FFAE6B; }
+  .wf-block--color-pink {
+    background-color: #DD5CA5; }
 
 /**
  * Note
