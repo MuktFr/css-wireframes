@@ -1,5 +1,6 @@
 /* Functional palette */
 $color-default:  hsl(220, 10%, 45%);
+$color-external:  saturate($color-default, 50%);
 $color-text: $color-default;
 $color-link: $color-text;
 $color-important: darken($color-default, 33%);

@@ -13,7 +13,8 @@
  *		</div>
  */
 .wf-note {
-	border: 1px solid $color-default;
+	border: 1px solid $color-external;
+	color: $color-external;
 	background-color: white;
 	display: block;
 	padding: 1em;
@@ -21,7 +22,7 @@
 	position: absolute;
 	top: -1em;
 	right: -1em;
-	transform: rotate(5deg);
+	transform: rotate(4deg);
 	z-index: 100;
 	
 	// Decoration 
@@ -40,7 +41,7 @@
 		top: -1px;
 		right: -1px;
 		border-top: 1em solid white;
-		border-left: 1em solid $color-default;
+		border-left: 1em solid $color-external;
 		width: 0;
 	}
 	

@@ -1223,7 +1223,8 @@ a {
  *		</div>
  */
 .wf-note {
-  border: 1px solid #676f7e;
+  border: 1px solid #2e5cb8;
+  color: #2e5cb8;
   background-color: white;
   display: block;
   padding: 1em;
@@ -1231,8 +1232,8 @@ a {
   position: absolute;
   top: -1em;
   right: -1em;
-  -webkit-transform: rotate(5deg);
-          transform: rotate(5deg);
+  -webkit-transform: rotate(4deg);
+          transform: rotate(4deg);
   z-index: 100; }
   .wf-note:before {
     content: '';
@@ -1248,7 +1249,7 @@ a {
     top: -1px;
     right: -1px;
     border-top: 1em solid white;
-    border-left: 1em solid #676f7e;
+    border-left: 1em solid #2e5cb8;
     width: 0; }
   .wf-note--top-left {
     right: auto;
@@ -1328,7 +1329,7 @@ a {
     opacity: 0;
     width: 15px;
     height: 15px;
-    background-color: #676f7e;
+    background-color: #2e5cb8;
     color: white;
     text-align: center;
     font-family: sans-serif;
