@@ -1,0 +1,37 @@
+/**
+ * Optional element
+ */
+.wf-optional {
+	position: relative;
+	
+	&:hover .wf-optional__close {
+		opacity: 1;
+	}
+	
+	/**
+	 * Close button
+	 * 
+	 * @note
+	 * By default, it is positioned according to the Bootstrap grid
+	 */
+	&__close {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		opacity: 0;
+		width: 15px;
+		height: 15px;
+		background-color: $color-default;
+		color: white;
+		text-align: center;
+		font-family: sans-serif;
+		text-decoration: none;
+		line-height: 15px;
+		font-size: 0.9rem;
+		transition: opacity 0.25s;
+		&:hover, &:focus {
+			background-color: $color-important;
+		}
+	}
+}
