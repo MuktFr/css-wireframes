@@ -46,4 +46,4 @@ Then compose your ergonomy puting blocks where you want, and apply wireframe cla
 
 ## Documentation
 
-Checkout [our complete examples](http://wireframes.ldd.fr/examples/) for a complete documentation.
+Checkout [our examples](http://wireframes.ldd.fr/examples/) for a complete documentation.
