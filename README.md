@@ -1,22 +1,21 @@
 # css-wireframes
 CSS framework to quickly design responsive wireframes directly in HTML.
 
-## Install
+## Installation
 
-Download a release, and put the CSS et JS in your project folders.
+Download a release, then put the CSS, JS and images in your project folders.
 
-## Usage
+## Getting started
 
-First, choose your preferred grid system, and then include css-wireframes.
+First, choose your favroite grid system, and then include css-wireframes.
 ``` html
-<html>
 	<head>
-		<!-- Responsive -->
-		<meta name="viewport" content="width=device-width,initial-scale=1">
-		<!-- Bootstrap grid only -->
+		<!-- The grid is up to you -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" type="text/css" />
-		<!-- CSS wireframes -->
+		<!-- Wireframes CSS -->
 		<link rel="stylesheet" href="css/wireframes.css" type="text/css" />
+		<!-- Wireframes Javascript -->
+		<script type="text/javascript" src="javascript/wireframes.js"></script>
 		…
 ```
 
@@ -45,6 +44,6 @@ Then compose your ergonomy puting blocks where you want, and apply wireframe cla
 </body>
 ```
 
-## Examples
+## Documentation
 
-Checkout [our complete examples](http://wireframes.ldd.fr/examples/).
+Checkout [our complete examples](http://wireframes.ldd.fr/examples/) for a complete documentation.
