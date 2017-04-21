@@ -27,6 +27,7 @@
 		background-color: inherit;
 		font-family: $font-family-code;
 		font-size: 1.2em;
+		font-weight: 600;
 	}
 	
 	/**
@@ -68,7 +69,7 @@
 			@include background-crossed(darken($color-dark, 30%));
 		}
 		.wf-block__label {
-			color: darken($color-dark, 40%);
+			color: lighten($color-dark, 50%);
 		}
 	}
 	
