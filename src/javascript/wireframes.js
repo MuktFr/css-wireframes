@@ -16,7 +16,7 @@ function css_wireframes_init(){
 			// Add the close button to each optional element
 			var elements = document.getElementsByClassName('wf-optional');
 			for (var i = 0; i < elements.length; i++) {
-				elements[i].insertAdjacentHTML('beforeEnd', '<a class="wf-optional__close" data-btn="hide-element">&times;</a>');
+				elements[i].insertAdjacentHTML('beforeEnd', '<a class="wf-optional__close" data-btn="hide-element" title="Hide this element">&times;</a>');
 			}
 
 			// Hide optional elements on click

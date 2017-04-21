@@ -48,4 +48,10 @@
 		}
 	}
 
+	/**
+	 * Inside a figure
+	 */
+	figure & {
+		margin-bottom: $gutter-vertical/2;
+	}
 }
