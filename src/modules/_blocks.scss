@@ -43,6 +43,13 @@
 	}
 	
 	/**
+	 * Borderless block
+	 */
+	&--borderless {
+		border-width: 0;
+	}
+	
+	/**
 	 * Make borders more visible
 	 */
 	&--important {
@@ -50,51 +57,114 @@
 	}
 	
 	/**
+	 * Dark background
+	 */
+	&--color-dark {
+		background-color: $color-dark;
+		border-color: darken($color-dark, 30%);
+		&.wf-block--crossed {
+			@include background-crossed(darken($color-dark, 30%));
+		}
+		.wf-block__label {
+			color: darken($color-dark, 40%);
+		}
+	}
+	
+	/**
+	 * Light background
+	 */
+	&--color-light {
+		background-color: $color-light;
+		border-color: darken($color-light, 30%);
+		&.wf-block--crossed {
+			@include background-crossed(darken($color-light, 30%));
+		}
+		.wf-block__label {
+			color: darken($color-light, 40%);
+		}
+	}
+	
+	/**
+	 * Gray background
+	 */
+	&--color-gray {
+		background-color: $color-gray;
+		border-color: darken($color-gray, 30%);
+		&.wf-block--crossed {
+			@include background-crossed(darken($color-gray, 30%));
+		}
+		.wf-block__label {
+			color: darken($color-gray, 40%);
+		}
+	}
+	
+	/**
+	 * Light gray background
+	 */
+	&--color-gray-light {
+		background-color: $color-gray-light;
+		border-color: darken($color-gray-light, 30%);
+		&.wf-block--crossed {
+			@include background-crossed(darken($color-gray-light, 30%));
+		}
+		.wf-block__label {
+			color: darken($color-gray-light, 40%);
+		}
+	}
+	
+	/**
 	 * Put a red background
 	 */
 	&--color-red {
 		background-color: $color-red;
+		border-color: darken($color-red, 30%);
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-red, 30%));
 		}
 		.wf-block__label {
-			color: darken($color-red, 50%);
+			color: darken($color-red, 40%);
 		}
 	}
+
 	/**
 	 * Put a green background
 	 */
 	&--color-green {
 		background-color: $color-green;
+		border-color: darken($color-green, 30%);
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-green, 30%));
 		}
 		.wf-block__label {
-			color: darken($color-green, 50%);
+			color: darken($color-green, 40%);
 		}
 	}
+
 	/**
 	 * Put a yellow background
 	 */
 	&--color-yellow {
 		background-color: $color-yellow;
+		border-color: darken($color-yellow, 30%);
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-yellow, 30%));
 		}
 		.wf-block__label {
-			color: darken($color-yellow, 50%);
+			color: darken($color-yellow, 40%);
 		}
 	}
+
 	/**
 	 * Put a pink background
 	 */
 	&--color-pink {
 		background-color: $color-pink;
+		border-color: darken($color-pink, 30%);
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-pink, 30%));
 		}
 		.wf-block__label {
-			color: darken($color-pink, 50%);
+			color: darken($color-pink, 40%);
 		}
 	}
 }

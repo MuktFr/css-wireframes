@@ -1,15 +1,18 @@
-
-/* Color palette */
-$color-red: #FF796B;
-$color-yellow: #FFAE6B;
-$color-green: #5CDD5C;
-$color-pink: #DD5CA5;
-
 /* Functional palette */
 $color-default:  hsl(220, 10%, 45%);
 $color-text: $color-default;
 $color-link: $color-text;
-$color-important: black;
+$color-important: darken($color-default, 33%);
+
+/* Color palette */
+$color-dark: $color-default;
+$color-light: lighten($color-default, 50%);
+$color-gray: hsl(0, 0%, 60%);
+$color-gray-light: hsl(0, 0%, 90%);
+$color-red: hsl(6, 100%, 71%);
+$color-yellow: hsl(27, 100%, 71%);
+$color-green: hsl(120, 65%, 61%);
+$color-pink: hsl(326, 65%, 61%);
 
 /* Gutters */
 $gutter-vertical: 1rem;
