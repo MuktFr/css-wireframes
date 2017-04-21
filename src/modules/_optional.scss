@@ -3,6 +3,7 @@
  */
 .wf-optional {
 	position: relative;
+	transition: all 1s; // for nice transitions when hidden
 
 	&:hover .wf-optional__close {
 		opacity: 1;

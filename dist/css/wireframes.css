@@ -393,11 +393,11 @@ dt {
 dd {
   margin-left: 1.5em; }
 
-.list-none {
+.list-none, .wf-toolbar__btn-group {
   margin-left: 0;
   list-style: none; }
 
-.list-none li:before {
+.list-none li:before, .wf-toolbar__btn-group li:before {
   content: ''; }
 
 .list-square {
@@ -1029,7 +1029,6 @@ a {
  */
 .wf-hidden,
 [class].wf-hidden {
-  transition: all 1s;
   opacity: 0;
   overflow: hidden;
   width: 0;
@@ -1234,7 +1233,8 @@ a {
   right: -1em;
   -webkit-transform: rotate(4deg);
           transform: rotate(4deg);
-  z-index: 100; }
+  z-index: 100;
+  font-family: sans-serif; }
   .wf-note:before {
     content: '';
     position: absolute;
@@ -1313,6 +1313,7 @@ a {
  */
 .wf-optional {
   position: relative;
+  transition: all 1s;
   /**
 	 * Close button
 	 * 
@@ -1339,5 +1340,62 @@ a {
     transition: opacity 0.25s; }
     .wf-optional__close:hover, .wf-optional__close:focus {
       background-color: #1c1e22; }
+
+/**
+ * Toolbar
+ */
+.wf-toolbar {
+  position: fixed;
+  bottom: 0;
+  right: 1rem;
+  background-color: #2e5cb8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row wrap;
+          flex-direction: row wrap;
+  font-family: sans-serif;
+  font-size: 0.75rem;
+  /**
+	 * Toolbar button group
+	 * 
+	 * This is a <ul>
+	 */
+  /**
+	 * Toolbar button
+	 *
+	 * This is a <li>
+	 */
+  /**
+	 * Toolbar link
+	 *
+	 * This is a <a>
+	 */ }
+  .wf-toolbar__btn-group {
+    margin: 0; }
+  .wf-toolbar__link {
+    display: block;
+    padding: 0.5rem 0.5rem;
+    color: white;
+    text-decoration: none; }
+    .wf-toolbar__link:before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 0.33em;
+      background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgaGVpZ2h0PSIxNnB4IgogICBpZD0iTGF5ZXJfMSIKICAgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgMTYgMTY7IgogICB2ZXJzaW9uPSIxLjEiCiAgIHZpZXdCb3g9IjAgMCAxNiAxNiIKICAgd2lkdGg9IjE2cHgiCiAgIHhtbDpzcGFjZT0icHJlc2VydmUiCiAgIGlua3NjYXBlOnZlcnNpb249IjAuOTEgcjEzNzI1IgogICBzb2RpcG9kaTpkb2NuYW1lPSJpY29uLXZpZXctbGlnaHQuc3ZnIj48bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGE5Ij48cmRmOlJERj48Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+PGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+PGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPjxkYzp0aXRsZT48L2RjOnRpdGxlPjwvY2M6V29yaz48L3JkZjpSREY+PC9tZXRhZGF0YT48ZGVmcwogICAgIGlkPSJkZWZzNyIgLz48c29kaXBvZGk6bmFtZWR2aWV3CiAgICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICAgIGJvcmRlcmNvbG9yPSIjNjY2NjY2IgogICAgIGJvcmRlcm9wYWNpdHk9IjEiCiAgICAgb2JqZWN0dG9sZXJhbmNlPSIxMCIKICAgICBncmlkdG9sZXJhbmNlPSIxMCIKICAgICBndWlkZXRvbGVyYW5jZT0iMTAiCiAgICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAiCiAgICAgaW5rc2NhcGU6cGFnZXNoYWRvdz0iMiIKICAgICBpbmtzY2FwZTp3aW5kb3ctd2lkdGg9IjEyNDgiCiAgICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iMTAyOCIKICAgICBpZD0ibmFtZWR2aWV3NSIKICAgICBzaG93Z3JpZD0iZmFsc2UiCiAgICAgaW5rc2NhcGU6em9vbT0iMTQuNzUiCiAgICAgaW5rc2NhcGU6Y3g9IjgiCiAgICAgaW5rc2NhcGU6Y3k9IjgiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjY1IgogICAgIGlua3NjYXBlOndpbmRvdy15PSIyNCIKICAgICBpbmtzY2FwZTp3aW5kb3ctbWF4aW1pemVkPSIwIgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9IkxheWVyXzEiIC8+PHBhdGgKICAgICBkPSJNOCw2YzAsMS4xMDQtMC44OTYsMi0yLDJjMCwxLjEwNCwwLjg5NiwyLDIsMnMyLTAuODk2LDItMlM5LjEwNCw2LDgsNnogTTgsMkMzLjg5OCwyLDAsNi42NDgsMCw4czMuODk4LDYsOCw2czgtNC42NDgsOC02ICBTMTIuMTAyLDIsOCwyeiBNOCwxMmMtMi4yMDksMC00LTEuNzkxLTQtNHMxLjc5MS00LDQtNHM0LDEuNzkxLDQsNFMxMC4yMDksMTIsOCwxMnoiCiAgICAgaWQ9InBhdGgzIgogICAgIHN0eWxlPSJmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjEiIC8+PC9zdmc+");
+      background-repeat: no-repeat;
+      background-position: center center; }
+    .wf-toolbar__link:visited {
+      color: white; }
+    .wf-toolbar__link:hover, .wf-toolbar__link:focus {
+      background-color: #1c1e22; }
+    .wf-toolbar__link--disabled {
+      pointer-events: none;
+      opacity: 0.33; }
 
 /*# sourceMappingURL=wireframes.css.map */

@@ -20,5 +20,6 @@ $gutter-vertical: 1rem;
 $gutter-horizontal: 1rem;
 
 /* Fonts */
-$font-family-base: sans-serif;
-$font-family-code: monospace;
+$font-family-base: sans-serif; // stuff in the wireframe
+$font-family-external: sans-serif; // stuff not belonging to the wireframe per se
+$font-family-code: monospace; // technical stuff

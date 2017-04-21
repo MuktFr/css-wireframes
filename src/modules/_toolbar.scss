@@ -1,0 +1,66 @@
+/**
+ * Toolbar
+ */
+.wf-toolbar {
+	
+	position: fixed;
+	bottom: 0;
+	right: $gutter-horizontal;
+	background-color: $color-external;
+	display: flex;
+	flex-direction: row wrap;
+	font-family: $font-family-external;
+	font-size: 0.75rem;
+	
+	/**
+	 * Toolbar button group
+	 * 
+	 * This is a <ul>
+	 */
+	&__btn-group {
+		@extend .list-none;
+		margin: 0;
+	}
+	
+	/**
+	 * Toolbar button
+	 *
+	 * This is a <li>
+	 */
+	&__btn {
+		
+	}
+	
+	/**
+	 * Toolbar link
+	 *
+	 * This is a <a>
+	 */
+	&__link {
+		display: block;
+		padding: $gutter-vertical/2 $gutter-horizontal/2;
+		color: white;
+		text-decoration: none;
+		&:before {
+			content: "";
+			width: 16px;
+			height: 16px;
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 0.33em;
+			background-image: url('../../src/images/icon-view-light.svg');
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+		&:visited {
+			color: white;
+		}
+		&:hover, &:focus {
+			background-color: $color-important;
+		}
+		&--disabled {
+			pointer-events: none;
+			opacity: 0.33;
+		}
+	}
+}
