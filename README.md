@@ -47,4 +47,4 @@ Then compose your ergonomy puting blocks where you want, and apply wireframe cla
 
 ## Examples
 
-Checkout [our complete examples](https://lesdeveloppementsdurables.github.io/css-wireframes/examples/).
+Checkout [our complete examples](http://wireframes.ldd.fr/examples/).
