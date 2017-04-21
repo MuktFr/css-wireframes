@@ -6,6 +6,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('autoprefixer');
 var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
+var cssBase64 = require('gulp-css-base64');
 
 // Default task
 gulp.task('default', function() {
@@ -16,7 +17,7 @@ gulp.task('default', function() {
 // - 2. Add autoprefixes to CSS
 // - 3. Minify the CSS
 gulp.task('watch', function() {
-    gulp.watch('./src/**', ['sass', 'autoprefixer', 'minify']);
+    gulp.watch('./src/**', ['sass', 'autoprefixer', 'base64', 'minify']);
 });
 
 // Task : compile the main SASS file to CSS
@@ -44,7 +45,16 @@ gulp.task('minify', function() {
             compatibility: 'ie8'
         }))
         .pipe(rename({suffix: ".min"}))
-        .pipe(gulp.dest('dist/'));
+        .pipe(gulp.dest('./dist'));
+});
+
+// Task : converts all data found within a stylesheet into base64-encoded data URI strings
+gulp.task('base64', function () {
+    return gulp.src('./dist/*.css')
+        .pipe(cssBase64({
+            //baseDir: "./src/images" // doesn't seem to work ?
+        }))
+        .pipe(gulp.dest('./dist'));
 });
 
 // Go go go !
