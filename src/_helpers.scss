@@ -44,3 +44,70 @@
 		}
 	}
 }
+
+/**
+ * Paddings
+ *
+ * Add paddings to any block
+ *
+ * @example
+ *		<div class="wf-block wf-padding--all"></div>
+ *		<div class="wf-block wf-padding--left"></div>
+ *		<div class="wf-block wf-padding--left-large wf-padding--right"></div>
+ *
+ * @note
+ * We specifically add .wf-block to ensure .wf-padding has priority
+ */
+.wf-padding,
+.wf-block.wf-padding {
+	&--all {
+		padding: $gutter-horizontal $gutter-vertical;
+		&-large {
+			padding: $gutter-horizontal * 2 $gutter-vertical * 2;
+		}
+	}
+	&--left {
+		padding-left: $gutter-horizontal;
+		&-large {
+			padding-left: $gutter-horizontal * 2;
+		}
+	}
+	&--top {
+		padding-top: $gutter-vertical;
+		&-large {
+			padding-top: $gutter-vertical * 2;
+		}
+	}
+	&--right {
+		padding-right: $gutter-horizontal;
+		&-large {
+			padding-right: $gutter-horizontal * 2;
+		}
+	}
+	&--bottom {
+		padding-bottom: $gutter-vertical;
+		&-large {
+			padding-bottom: $gutter-vertical * 2;
+		}
+	}
+}
+
+/**
+ * Hide en element
+ *
+ * Does not use display: none; so you can have animations
+ */
+.wf-hidden,
+[class].wf-hidden {
+	transition: all 1s; //
+	opacity: 0;
+	overflow: hidden;
+	width: 0;
+	max-width: 0;
+	height: 0;
+	max-height: 0;
+	//flex-basis: 0%;
+	padding: 0;
+	margin: 0;
+	line-height: 0;
+}

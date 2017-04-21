@@ -974,6 +974,72 @@ a {
   .wf-block.wf-margin--bottom-large {
     margin-bottom: 2rem; }
 
+/**
+ * Paddings
+ *
+ * Add paddings to any block
+ *
+ * @example
+ *		<div class="wf-block wf-padding--all"></div>
+ *		<div class="wf-block wf-padding--left"></div>
+ *		<div class="wf-block wf-padding--left-large wf-padding--right"></div>
+ *
+ * @note
+ * We specifically add .wf-block to ensure .wf-padding has priority
+ */
+.wf-padding--all,
+.wf-block.wf-padding--all {
+  padding: 1rem 1rem; }
+  .wf-padding--all-large,
+  .wf-block.wf-padding--all-large {
+    padding: 2rem 2rem; }
+
+.wf-padding--left,
+.wf-block.wf-padding--left {
+  padding-left: 1rem; }
+  .wf-padding--left-large,
+  .wf-block.wf-padding--left-large {
+    padding-left: 2rem; }
+
+.wf-padding--top,
+.wf-block.wf-padding--top {
+  padding-top: 1rem; }
+  .wf-padding--top-large,
+  .wf-block.wf-padding--top-large {
+    padding-top: 2rem; }
+
+.wf-padding--right,
+.wf-block.wf-padding--right {
+  padding-right: 1rem; }
+  .wf-padding--right-large,
+  .wf-block.wf-padding--right-large {
+    padding-right: 2rem; }
+
+.wf-padding--bottom,
+.wf-block.wf-padding--bottom {
+  padding-bottom: 1rem; }
+  .wf-padding--bottom-large,
+  .wf-block.wf-padding--bottom-large {
+    padding-bottom: 2rem; }
+
+/**
+ * Hide en element
+ *
+ * Does not use display: none; so you can have animations
+ */
+.wf-hidden,
+[class].wf-hidden {
+  transition: all 1s;
+  opacity: 0;
+  overflow: hidden;
+  width: 0;
+  max-width: 0;
+  height: 0;
+  max-height: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 0; }
+
 /* Modules */
 /* Not readable texts, just for the grey */
 .wf-text {
