@@ -13,7 +13,7 @@
  *		</div>
  */
 .wf-note {
-	@include wf-border;
+	border: 1px solid $color-default;
 	background-color: white;
 	display: block;
 	padding: 1em;

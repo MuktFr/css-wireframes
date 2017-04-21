@@ -33,7 +33,7 @@
 	/**
 	 * Take all the place
 	 */
-	&--fluid {
+	&--fill {
 		width: 100%;
 		height: 100%;
 	}
@@ -56,7 +56,8 @@
 	 * Make borders more visible
 	 */
 	&--important {
-		
+		border: 1px solid $color-important;
+		box-shadow: inset 0 0 0 1px $color-important;
 	}
 	
 	/**

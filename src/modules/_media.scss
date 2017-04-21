@@ -14,7 +14,7 @@
  */
 .wf-media {
 
-	@include wf-border; // common border
+	border: 1px solid $color-default;
 	background-image: url('../src/images/media-image-dark.svg');
 	background-repeat: no-repeat;
 	background-position: center center;

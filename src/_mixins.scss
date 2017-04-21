@@ -7,7 +7,7 @@
  *
  **/ 
 @mixin wf-border($width: 1px) {
-	border: #{$width} solid $color-default;
+	border: #{$width} dotted $color-default;
 }
 
 /**
