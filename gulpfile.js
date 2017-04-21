@@ -43,7 +43,7 @@ gulp.task('base64', function() {
     return gulp.src('./dist/css/*.css')
         .pipe(cssBase64({
             maxWeightResource: 50,
-            //baseDir: "./src/images" // doesn't seem to work ?
+            //baseDir: "./src" // doesn't seem to work ?
         }))
         .pipe(gulp.dest('./dist/css'));
 });
@@ -76,7 +76,7 @@ gulp.task('sourcemaps', function() {
     return gulp.src('./dist/css/*.css')
         .pipe(sourcemaps.init())
         .pipe(sourcemaps.write('.'))
-				.pipe(gulp.dest('./dist/css'));
+        .pipe(gulp.dest('./dist/css'));
 });
 
 // Go go go !
