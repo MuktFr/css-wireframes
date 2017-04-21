@@ -1,0 +1,55 @@
+/**
+ * CSS wireframe documentation
+ *
+ * [TODO] SASS this !
+ */
+
+[class^=wf-doc] {
+	font-family: sans-serif;
+	color: #222;
+}
+
+/* sections */
+.wf-doc__section, #overview {
+	margin-bottom: 2rem;
+}
+.wf-doc__section {
+	padding-top: 2rem;
+	border-top: 1px solid #eee;
+}
+.wf-doc__section-title {
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+/* explanations */
+.wf-doc__explanation {
+}
+.wf-doc__explanation-title {
+	font-weight: bold;
+}
+
+/* class label */
+.wf-doc__class {
+	display: inline-block;
+	color: hsl(220, 50%, 50%);
+	margin-bottom: 0.5rem;
+}
+
+/* demo + code */
+.wf-doc__demo-code {
+	border: 2px solid #f0f0f0;
+}
+
+/* demo */
+.wf-doc__demo {
+	padding: 1rem;
+}
+
+/* code */
+.wf-doc__code {
+	margin: 0;
+}
+.wf-doc__code:before {
+	/*content: "Code :";*/
+}

@@ -1,19 +1,29 @@
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>CSS wireframe example</title>
-		<!-- Responsive -->
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<!-- We use the Bootstrap CSS grid for this example, but the grid used is up to you -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" type="text/css" />
-		<!-- Wireframes CSS -->
-		<link rel="stylesheet" href="../dist/css/wireframes.css" type="text/css" />
-		<!-- Wireframes Javascript -->
-		<script type="text/javascript" src="../dist/javascript/wireframes.js"></script>
-	</head>
-	<body class="wf-padding--top padding--bottom">
-		<div class="container">
 
+<head>
+	<meta charset="utf-8">
+	<title>CSS wireframe example</title>
+	<!-- Responsive -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- We use the Bootstrap CSS grid for this example, but the grid is up to you -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" type="text/css" />
+	<!-- Wireframes CSS -->
+	<link rel="stylesheet" href="../dist/css/wireframes.min.css" type="text/css" />
+	<!-- Wireframes Javascript -->
+	<script type="text/javascript" src="../dist/javascript/wireframes.min.js"></script>
+	<!-- Documentation CSS -->
+	<link rel="stylesheet" href="css/documentation.css" type="text/css" />
+	<!-- Code coloration for the documentation (you don't need this!) -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+</head>
+
+<body class="wf-padding--top padding--bottom">
+	<div class="container">
+
+
+		<!-- Overview section -->
+		<section id="overview">
 			<div class="wf-block wf-margin--bottom wf-optional" title="A block">
 				<span class="wf-block__label" title="A block label">Header</span>
 			</div>
@@ -42,20 +52,27 @@
 						<img src="../dist/images/ratio-1-1.png" width="50" class="wf-media wf-media--audio wf-margin--left right" title="An audio media">
 						<span class="wf-text-lines" title="Dummy text">Dui phasellus curabitur a eros at suspendisse ac tempus parturient ut dapibus ante vestibulum ultrices praesent parturient turpis donec vulputate nunc. Vestibulum mi nam inceptos parturient quis a ullamcorper venenatis nam a consectetur integer vestibulum vitae felis condimentum in donec porttitor fames ut parturient montes.
 					</p>
-					
-					<!-- Demo different types of texts : lines, block, and normal -->
+
+					<!-- Different types of texts : lines, block, and normal -->
 					<div class="row wf-margin--bottom-large">
 						<div class="col-md-4" title="Dummy text">
-							<span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien. interdum a commodo a parturient sit cras laoreet adipiscing magna sapie</span>
+							<p>
+								<span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien. interdum a commodo a parturient sit cras laoreet adipiscing magna sapie.</span>
+							</p>
 						</div>
-						<div class="col-md-4 wf-text-words" title="Blocky text">
-							Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien.
+						<div class="col-md-4">
+							<p class="wf-text-words" title="Blocky text">
+								Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien.
+							</p>
 						</div>
-						<div class="col-md-4" title="Regular text">
+						<div class="col-md-4">
+							<p title="Regular text">
 							Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien.
+							</p>
 						</div>
 					</div>
-					
+
+					<!-- Colored variants of blocks -->
 					<div class="row">
 						<div class="col-md-6">
 							<div class="wf-block wf-block--crossed wf-block--color-dark">
@@ -88,6 +105,7 @@
 							</div>
 						</div>
 					</div>
+
 				</div>
 
 				<div class="col-md-4 wf-optional">
@@ -95,13 +113,59 @@
 						<span class="wf-block__label" title="A block label">
 							Navigation
 						</span>
-						
-						<div class="wf-note" title="A note about this block">A very useful information.<br/>Two lines.</div>
+						<div class="wf-note" title="A note about this block">
+							A very useful information.<br/>Two lines.
+						</div>
 					</div>
 				</div>
-
 			</div>
-		</div>
+		</section>
+		<!-- end #overview -->
 
-	</body>
+
+		<!-- Text section -->
+		<section id="text" class="wf-doc__section">
+			<h2 class="wf-doc__section-title">Text</h2>
+			<!-- Explanation -->
+			<div class="wf-doc__explanation">
+				<h3 class="wf-doc__explanation-title">Text lines</h3>
+				<p  class="wf-doc__explanation-content">
+					Use dummy text lines to obtain less distracting text.
+					<br>it must be applied <strong>only on inline elements.</strong>
+				</p>
+			</div>
+			<!-- Class name -->
+			<label class="wf-doc__class">.wf-text-lines</label>
+			<div class="wf-doc__demo-code">
+				<div class="row no-gutters align-items-start">
+					<!-- Demo -->
+					<div class="col-md-6">
+						<div class="wf-doc__demo">
+							<span class="wf-text-lines">
+								Vestibulum cras condimentum dis ullamcorper.
+								<br>Vestibulum cras condimentum.
+							</span>
+						</div>
+					</div>
+					<!-- Code -->
+					<div class="col-md-6">
+						<pre class="wf-doc__code">
+							<code class="html">
+								<span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper.</span>
+							</code>
+						</pre>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end #text -->
+
+
+	</div>
+	<!-- Init code highlighting -->
+	<script>
+		hljs.initHighlightingOnLoad();
+	</script>
+</body>
+
 </html>
