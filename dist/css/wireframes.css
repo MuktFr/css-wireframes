@@ -1364,7 +1364,6 @@ a {
   position: fixed;
   bottom: 0;
   right: 1rem;
-  background-color: #2e5cb8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1394,6 +1393,7 @@ a {
   .wf-toolbar__link {
     display: block;
     padding: 0.5rem 0.5rem;
+    background-color: #2e5cb8;
     color: white;
     text-decoration: none; }
     .wf-toolbar__link:before {
