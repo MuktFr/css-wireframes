@@ -1,0 +1,34 @@
+/**
+ * Margins
+ *
+ * Add margins to any block
+ */
+.wf-margin {
+	&--left {
+		margin-left: $gutter-horizontal;
+	}
+	&--top {
+		margin-top: $gutter-vertical;
+	}
+	&--right {
+		margin-right: $gutter-horizontal;
+	}
+	&--bottom {
+		margin-bottom: $gutter-vertical;
+	}
+	/* large variant */
+	&--large {
+		&.wf-margin--left {
+			margin-left: $gutter-horizontal * 2;
+		}
+		&.wf-margin--top {
+			margin-top: $gutter-vertical  * 2;
+		}
+		&.wf-margin--right {
+			margin-right: $gutter-horizontal * 2;
+		}
+		&.wf-margin--bottom {
+			margin-bottom: $gutter-vertical * 2;
+		}
+	}
+}

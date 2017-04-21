@@ -19,6 +19,9 @@
 /* Base */
 @import "base";
 
+/* helpers */
+@import "helpers";
+
 /* Modules */
 @import "modules/text"; // Create pseudo text with block characters
 @import "modules/blocks"; // Manage wireframe blocks
