@@ -42,6 +42,7 @@ gulp.task('autoprefixer', function() {
 gulp.task('base64', function() {
     return gulp.src('./dist/css/*.css')
         .pipe(cssBase64({
+            maxWeightResource: 50,
             //baseDir: "./src/images" // doesn't seem to work ?
         }))
         .pipe(gulp.dest('./dist/css'));
