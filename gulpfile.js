@@ -12,12 +12,9 @@ var cssBase64 = require('gulp-css-base64');
 gulp.task('default', function() {
 });
 
-// Main task : monitor changes on SASS files and fire some stuff :
-// - 1. Compile SASS to CSS
-// - 2. Add autoprefixes to CSS
-// - 3. Minify the CSS
+// Task : monitor changes on SASS files, launch the compilation and post-compilation stuff
 gulp.task('watch', function() {
-    gulp.watch('./src/**', ['sass', 'autoprefixer', 'base64', 'minify']);
+    return gulp.watch('./src/**', gulp.series('sass', 'autoprefixer', 'base64', 'minify'));
 });
 
 // Task : compile the main SASS file to CSS
@@ -38,6 +35,15 @@ gulp.task('autoprefixer', function() {
         .pipe(gulp.dest('./dist'));
 });
 
+// Task : converts all data found within a stylesheet into base64-encoded data URI strings
+gulp.task('base64', function () {
+    return gulp.src('./dist/*.css')
+        .pipe(cssBase64({
+            //baseDir: "./src/images" // doesn't seem to work ?
+        }))
+        .pipe(gulp.dest('./dist'));
+});
+
 // Task : minify the compiled CSS file in a new .min.css file
 gulp.task('minify', function() {
     return gulp.src('./dist/wireframes.css')
@@ -48,14 +54,5 @@ gulp.task('minify', function() {
         .pipe(gulp.dest('./dist'));
 });
 
-// Task : converts all data found within a stylesheet into base64-encoded data URI strings
-gulp.task('base64', function () {
-    return gulp.src('./dist/*.css')
-        .pipe(cssBase64({
-            //baseDir: "./src/images" // doesn't seem to work ?
-        }))
-        .pipe(gulp.dest('./dist'));
-});
-
 // Go go go !
-gulp.task('default', ['watch']);
+gulp.task('default', gulp.series('watch'));
