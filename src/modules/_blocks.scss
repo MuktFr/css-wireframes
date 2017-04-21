@@ -6,8 +6,8 @@
  **/ 
 .wf-block {
 	@include wf-border;
-	padding: 1rem;
-	margin-bottom: 1.5rem;
+	padding: $gutter-vertical $gutter-horizontal;
+	margin-bottom: $gutter-vertical;
 	position: relative;
 	
 	/**
