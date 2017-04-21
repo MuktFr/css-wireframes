@@ -59,8 +59,9 @@
 			background-color: $color-important;
 		}
 		&--disabled {
-			pointer-events: none;
-			opacity: 0.33;
+			display: none;
+			//pointer-events: none;
+			//opacity: 0.33;
 		}
 	}
 }
