@@ -983,8 +983,8 @@ a {
  **/
 .wf-block {
   border: 1px solid #676f7e;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
   position: relative;
   /**
 	 * Take all the place

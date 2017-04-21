@@ -9,3 +9,22 @@
 @mixin wf-border($width: 1px) {
 	border: #{$width} solid $color-default;
 }
+
+/**
+ * Add a diagonal background image
+ */
+@mixin background-crossed($color: $color-default) {
+	background-image: 
+		linear-gradient(to top left,
+			rgba($color, 0) 0%,
+			rgba($color, 0) calc(50% - 0.8px),
+			rgba($color, 1) 50%,
+			rgba($color, 0) calc(50% + 0.8px),
+			rgba($color, 0) 100%),
+		linear-gradient(to top right,
+			rgba($color, 0) 0%,
+			rgba($color, 0) calc(50% - 0.8px),
+			rgba($color, 1) 50%,
+			rgba($color, 0) calc(50% + 0.8px),
+			rgba($color, 0) 100%);
+}

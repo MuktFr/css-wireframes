@@ -4,6 +4,9 @@
  * Add margins to any block
  */
 .wf-margin {
+	&--all {
+		margin: $gutter-horizontal;
+	}
 	&--left {
 		margin-left: $gutter-horizontal;
 	}
@@ -18,6 +21,9 @@
 	}
 	/* large variant */
 	&--large {
+		&.wf-margin--all {
+			margin: $gutter-horizontal * 2;
+		}
 		&.wf-margin--left {
 			margin-left: $gutter-horizontal * 2;
 		}

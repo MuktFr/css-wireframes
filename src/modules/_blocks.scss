@@ -9,6 +9,23 @@
 	padding: $gutter-vertical $gutter-horizontal;
 	margin-bottom: $gutter-vertical;
 	position: relative;
+	display: flex;
+	flex-direction: row wrap;
+	justify-content: flex-start; // content to the top
+	align-items: flex-start; // content to the left
+	> * {
+		flex: 0 0 auto; // do not grow or shrink content
+	}
+	
+	/**
+	 * Block label
+	 */
+	&__label {
+		align-self: center; // centered vertically
+		margin: 0 auto; // centered horizontally
+		padding: $gutter-vertical/2 $gutter-horizontal/2;
+		background-color: inherit;
+	}
 	
 	/**
 	 * Take all the place
@@ -22,19 +39,7 @@
 	 * Put diagonals inside the block
 	 */
 	&--crossed {
-		background: 
-			linear-gradient(to top left,
-				rgba($color-default, 0) 0%,
-				rgba($color-default, 0) calc(50% - 0.8px),
-				rgba($color-default, 1) 50%,
-				rgba($color-default, 0) calc(50% + 0.8px),
-				rgba($color-default, 0) 100%),
-			linear-gradient(to top right,
-				rgba($color-default, 0) 0%,
-				rgba($color-default, 0) calc(50% - 0.8px),
-				rgba($color-default, 1) 50%,
-				rgba($color-default, 0) calc(50% + 0.8px),
-				rgba($color-default, 0) 100%);
+		@include background-crossed;
 	}
 	
 	/**
@@ -49,23 +54,47 @@
 	 */
 	&--color-red {
 		background-color: $color-red;
+		&.wf-block--crossed {
+			@include background-crossed(darken($color-red, 30%));
+		}
+		.wf-block__label {
+			color: darken($color-red, 50%);
+		}
 	}
 	/**
-	 * Put a red background
+	 * Put a green background
 	 */
 	&--color-green {
 		background-color: $color-green;
+		&.wf-block--crossed {
+			@include background-crossed(darken($color-green, 30%));
+		}
+		.wf-block__label {
+			color: darken($color-green, 50%);
+		}
 	}
 	/**
-	 * Put a red background
+	 * Put a yellow background
 	 */
 	&--color-yellow {
 		background-color: $color-yellow;
+		&.wf-block--crossed {
+			@include background-crossed(darken($color-yellow, 30%));
+		}
+		.wf-block__label {
+			color: darken($color-yellow, 50%);
+		}
 	}
 	/**
-	 * Put a red background
+	 * Put a pink background
 	 */
 	&--color-pink {
 		background-color: $color-pink;
+		&.wf-block--crossed {
+			@include background-crossed(darken($color-pink, 30%));
+		}
+		.wf-block__label {
+			color: darken($color-pink, 50%);
+		}
 	}
 }
