@@ -9,13 +9,13 @@ Download a release, then put the CSS, JS and images in your project folders.
 
 First, choose your favorite grid system, then include the wireframe CSS and Javascript.
 ``` html
-	<head>
-		<!-- The grid is up to you -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" type="text/css" />
-		<!-- Wireframes CSS -->
-		<link rel="stylesheet" href="css/wireframes.css" type="text/css" />
-		<!-- Wireframes Javascript -->
-		<script type="text/javascript" src="javascript/wireframes.js"></script>
+<head>
+	<!-- The grid is up to you -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" type="text/css" />
+	<!-- Wireframes CSS -->
+	<link rel="stylesheet" href="css/wireframes.css" type="text/css" />
+	<!-- Wireframes Javascript -->
+	<script type="text/javascript" src="javascript/wireframes.js"></script>
 		…
 ```
 
