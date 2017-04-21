@@ -1,7 +1,21 @@
+/**
+ * Blocky font
+ */
 @font-face {
   font-family: 'blokkneue';
   src: url('../../fonts/blokkneue-regular.woff2') format('woff2'),
        url('../../fonts/blokkneue-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
+ * Cursive font
+ */
+@font-face {
+  font-family: 'kalam';
+  src: url('../../fonts/kalam-regular.woff2') format('woff2'),
+       url('../../fonts/kalam-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

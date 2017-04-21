@@ -11,8 +11,8 @@
 	&-lines {
 		background-color: $color-text;
 		color: transparent;
-		font-size: 0.83em;
-		line-height: 1.8;
+		font-size: 0.5em; // Adjusted to match the main font
+		line-height: 2.5; // Adjusted to match the main font
 		
 		&.wf-text--important {
 			background-color: $color-important;
@@ -28,7 +28,7 @@
 	 **/
 	&-words {
 		font-family: 'blokkneue', cursive;
-		line-height: 1.3;
+		line-height: 0.95; // Adjusted to match the main font
 		
 		&.wf-text--important {
 			color: $color-important;
