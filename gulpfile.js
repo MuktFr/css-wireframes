@@ -12,9 +12,12 @@ var cssBase64 = require('gulp-css-base64');
 // Default task
 gulp.task('default', function() {});
 
-// Task : monitor changes on SASS files, launch the compilation and post-compilation stuff
+// Task : monitor changes on files and launch various tasks
 gulp.task('watch', function() {
-    return gulp.watch('./src/**', gulp.series('sass', 'autoprefixer', 'base64', 'minify-css', 'minify-js'));
+    // CSS stuff
+    gulp.watch('./src/css/**', gulp.series('sass', 'autoprefixer', 'base64', 'minify-css', 'sourcemaps'));
+    // Javascript stuff
+    gulp.watch('./src/javascript/**', gulp.series('minify-js'));
 });
 
 // Task : compile the main SASS file to CSS
@@ -64,7 +67,15 @@ gulp.task('minify-js', function() {
                 min: '.min.js'
             }
         }))
-        .pipe(gulp.dest('./dist/javascript'))
+        .pipe(gulp.dest('./dist/javascript'));
+});
+
+// Task : create sourcemaps for the compiled CSS
+gulp.task('sourcemaps', function() {
+    return gulp.src('./dist/css/*')
+        .pipe(sourcemaps.init())
+        .pipe(sourcemaps.write('.'))
+				.pipe(gulp.dest('./dist/css'));
 });
 
 // Go go go !
