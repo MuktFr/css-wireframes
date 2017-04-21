@@ -7,7 +7,7 @@ Download a release, then put the CSS, JS and images in your project folders.
 
 ## Getting started
 
-First, choose your favorite grid system, then include the wireframe CSS and Javascript.
+First, choose your favorite grid system, and include the wireframe CSS and Javascript.
 ``` html
 <head>
 	<!-- The grid is up to you -->
