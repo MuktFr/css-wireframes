@@ -64,7 +64,7 @@
 	 */
 	&--color-dark {
 		background-color: $color-dark;
-		border-color: darken($color-dark, 30%);
+		border-color: $color-dark;
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-dark, 30%));
 		}
@@ -78,7 +78,7 @@
 	 */
 	&--color-light {
 		background-color: $color-light;
-		border-color: darken($color-light, 30%);
+		border-color: $color-light;
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-light, 30%));
 		}
@@ -92,7 +92,7 @@
 	 */
 	&--color-gray {
 		background-color: $color-gray;
-		border-color: darken($color-gray, 30%);
+		border-color: $color-gray;
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-gray, 30%));
 		}
@@ -106,7 +106,7 @@
 	 */
 	&--color-gray-light {
 		background-color: $color-gray-light;
-		border-color: darken($color-gray-light, 30%);
+		border-color: $color-gray-light;
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-gray-light, 30%));
 		}
@@ -120,7 +120,7 @@
 	 */
 	&--color-red {
 		background-color: $color-red;
-		border-color: darken($color-red, 30%);
+		border-color: $color-red;
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-red, 30%));
 		}
@@ -134,7 +134,7 @@
 	 */
 	&--color-green {
 		background-color: $color-green;
-		border-color: darken($color-green, 30%);
+		border-color: $color-green;
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-green, 30%));
 		}
@@ -148,7 +148,7 @@
 	 */
 	&--color-yellow {
 		background-color: $color-yellow;
-		border-color: darken($color-yellow, 30%);
+		border-color: $color-yellow;
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-yellow, 30%));
 		}
@@ -162,7 +162,7 @@
 	 */
 	&--color-pink {
 		background-color: $color-pink;
-		border-color: darken($color-pink, 30%);
+		border-color: $color-pink;
 		&.wf-block--crossed {
 			@include background-crossed(darken($color-pink, 30%));
 		}
