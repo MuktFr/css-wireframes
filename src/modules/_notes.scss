@@ -18,13 +18,13 @@
 	background-color: white;
 	display: block;
 	padding: 1em;
-	font-size: 0.8em;
+	font-size: 0.85em;
 	position: absolute;
 	top: -1em;
 	right: -1em;
 	transform: rotate(4deg);
 	z-index: 100;
-	font-family: $font-family-external;
+	//font-family: $font-family-external;
 	
 	// Decoration 
 	&:before {
