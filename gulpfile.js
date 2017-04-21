@@ -15,7 +15,7 @@ gulp.task('default', function() {});
 // Task : monitor changes on files and launch various tasks
 gulp.task('watch', function() {
     // CSS stuff
-    gulp.watch('./src/css/**', gulp.series('sass', 'autoprefixer', 'base64', 'minify-css', 'sourcemaps'));
+    gulp.watch('./src/**/*.scss', gulp.series('sass', 'autoprefixer', 'base64', 'minify-css', 'sourcemaps'));
     // Javascript stuff
     gulp.watch('./src/javascript/**', gulp.series('minify-js'));
 });
