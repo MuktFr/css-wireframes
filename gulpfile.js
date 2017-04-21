@@ -17,7 +17,7 @@ gulp.task('watch', function() {
     // CSS stuff
     gulp.watch('./src/**/*.scss', gulp.series('sass', 'autoprefixer', 'base64', 'minify-css', 'sourcemaps'));
     // Javascript stuff
-    gulp.watch('./src/javascript/**', gulp.series('minify-js'));
+    gulp.watch('./src/javascript/*.js', gulp.series('minify-js'));
 });
 
 // Task : compile the main SASS file to CSS
@@ -61,7 +61,7 @@ gulp.task('minify-css', function() {
 
 // Task : minify the JS file in a new .min.js file
 gulp.task('minify-js', function() {
-    gulp.src('./src/javascript/*.js')
+    return gulp.src('./src/javascript/*.js')
         .pipe(minify({
             ext: {
                 min: '.min.js'
