@@ -935,9 +935,11 @@ body {
   font-family: "kalam", cursive;
   font-size: 16px; }
 
-a {
-  color: #676f7e;
+a, a:visited {
+  color: #4b659b;
   text-decoration: underline; }
+  a:hover, a:visited:hover {
+    color: #1152d4; }
 
 /* helpers */
 /**
@@ -1075,11 +1077,18 @@ a {
     color: transparent;
     font-size: 0.5em;
     line-height: 2.5; }
+    .wf-text-lines a {
+      color: inherit;
+      background-color: #2e539e; }
+      .wf-text-lines a:hover {
+        background-color: #1152d4; }
     .wf-text-lines.wf-text--important {
       background-color: #1c1e22; }
   .wf-text-words {
     font-family: 'blokkneue', cursive;
     line-height: 0.95; }
+    .wf-text-words a {
+      text-decoration: none; }
     .wf-text-words.wf-text--important {
       color: #1c1e22; }
 

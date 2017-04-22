@@ -2,7 +2,8 @@
 $color-default:  hsl(220, 10%, 45%);
 $color-external:  saturate($color-default, 50%);
 $color-text: $color-default;
-$color-link: $color-text;
+$color-link: saturate($color-text, 25%);
+$color-link-hover: saturate($color-link, 50%);
 $color-important: darken($color-default, 33%);
 
 /* Color palette */

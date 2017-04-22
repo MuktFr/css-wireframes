@@ -53,3 +53,9 @@
 .wf-doc__code:before {
 	/*content: "Code :";*/
 }
+
+/* misc */
+.tipsy {
+	font-family: sans-serif;
+	font-size: 0.8rem;
+}

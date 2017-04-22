@@ -5,7 +5,10 @@ body {
 	font-size: $font-size-base;
 }
 
-a {
+a, a:visited {
 	color: $color-link;
 	text-decoration: underline;
+	&:hover {
+		color: $color-link-hover;
+	}
 }

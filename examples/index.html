@@ -1,21 +1,31 @@
 <html lang="en">
 
 <head>
+
 	<meta charset="utf-8">
 	<title>CSS wireframe example</title>
 	<!-- Responsive -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<!-- We use the Bootstrap CSS grid for this example, but the grid is up to you -->
+
+	<!-- ======== CSS Wireframe includes ======== -->
+	<!-- We use the Bootstrap 4 grid in this example, but the grid choice is up to you -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" type="text/css" />
 	<!-- Wireframes CSS -->
 	<link rel="stylesheet" href="../dist/css/wireframes.min.css" type="text/css" />
 	<!-- Wireframes Javascript -->
 	<script type="text/javascript" src="../dist/javascript/wireframes.min.js"></script>
-	<!-- Documentation CSS -->
+
+	<!-- ======== Documentation includes ======== -->
+	<!-- jQuery + tooltips -->
+	<script src="https://cdn.jsdelivr.net/g/jquery@3.2.1,tipsy@1.0"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/tipsy/1.0/stylesheets/tipsy.css">
+	<!-- Documentation CSS And Javascript -->
 	<link rel="stylesheet" href="css/documentation.css" type="text/css" />
-	<!-- Code coloration for the documentation (you don't need this!) -->
+	<script src="javascript/documentation.js"></script>
+	<!-- Code coloration -->
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
 	<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+
 </head>
 
 <body class="wf-padding--top padding--bottom">
@@ -32,7 +42,7 @@
 				<div class="col">
 
 					<h1>
-						<span class="wf-text-lines">
+						<span class="wf-text-lines" title="A dummy heading">
 							Lorem ipsum dolor sit amet cras condimentum
 						</span>
 					</h1>
@@ -55,19 +65,19 @@
 
 					<!-- Different types of texts : lines, block, and normal -->
 					<div class="row wf-margin--bottom-large">
-						<div class="col-md-4" title="Dummy text">
-							<p>
-								<span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien. interdum a commodo a parturient sit cras laoreet adipiscing magna sapie.</span>
+						<div class="col-md-4">
+							<p title="Dummy text">
+								<span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum <a href="#" title="A link inside a Dummy text">a commodo a parturient</a> sit cras laoreet adipiscing magna sapien. interdum a commodo a parturient sit cras laoreet adipiscing magna sapie.</span>
 							</p>
 						</div>
 						<div class="col-md-4">
-							<p class="wf-text-words" title="Blocky text">
-								Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien.
+							<p class="wf-text-words" title="Dummy block text">
+								Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum <a href="#" title="A link inside a dummy block text">a commodo a parturient</a> sit cras laoreet adipiscing magna sapien.
 							</p>
 						</div>
 						<div class="col-md-4">
 							<p title="Regular text">
-							Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien.
+								Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum <a href="#" title="A link">a commodo a parturient</a> sit cras laoreet adipiscing magna sapien.
 							</p>
 						</div>
 					</div>

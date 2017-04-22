@@ -13,12 +13,20 @@
 		color: transparent;
 		font-size: 0.5em; // Adjusted to match the main font
 		line-height: 2.5; // Adjusted to match the main font
-		
+
+		a {
+			color: inherit;
+			background-color: saturate(darken($color-link, 5%), 20%);
+			&:hover {
+				background-color: $color-link-hover;
+			}
+		}
+
 		&.wf-text--important {
 			background-color: $color-important;
 		}
 	}
-	
+
 	/**
 	 * Generate block words
 	 *
@@ -29,7 +37,11 @@
 	&-words {
 		font-family: 'blokkneue', cursive;
 		line-height: 0.95; // Adjusted to match the main font
-		
+
+		a {
+			text-decoration: none;
+		}
+
 		&.wf-text--important {
 			color: $color-important;
 		}
