@@ -1083,6 +1083,9 @@ a, a:visited {
       background-color: #2e539e; }
       .wf-text-lines a:hover {
         background-color: #1152d4; }
+      .wf-text-lines a:focus {
+        background-color: #1c1e22 !important;
+        color: #1c1e22 !important; }
     .wf-text-lines.wf-text--important {
       background-color: #1c1e22; }
   .wf-text-words {
@@ -1090,6 +1093,9 @@ a, a:visited {
     line-height: 0.95; }
     .wf-text-words a {
       text-decoration: none; }
+      .wf-text-words a:focus {
+        background-color: transparent !important;
+        color: #1c1e22 !important; }
     .wf-text-words.wf-text--important {
       color: #1c1e22; }
 

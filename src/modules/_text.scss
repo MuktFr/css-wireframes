@@ -20,6 +20,10 @@
 			&:hover {
 				background-color: $color-link-hover;
 			}
+			&:focus {
+				background-color: $color-important !important; // grrrr tinytypo !
+				color: $color-important !important; // grrrr tinytypo !
+			}
 		}
 
 		&.wf-text--important {
@@ -40,6 +44,10 @@
 
 		a {
 			text-decoration: none;
+			&:focus {
+				background-color: transparent !important; // grrrr tinytypo !
+				color: $color-important !important; // grrrr tinytypo !
+			}
 		}
 
 		&.wf-text--important {
