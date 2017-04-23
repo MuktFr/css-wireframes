@@ -930,7 +930,8 @@ Styleguide tinytypo.print
   font-style: normal; }
 
 /* Base */
-body {
+body,
+[class^=wf-] {
   color: #676f7e;
   font-family: "kalam", cursive;
   font-size: 16px; }

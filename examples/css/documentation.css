@@ -4,57 +4,103 @@
  * [TODO] SASS this !
  */
 
-[class^=wf-doc] {
-	font-family: sans-serif;
-	color: #222;
+/* Overview section */
+#overview {
+	padding: 1rem 0;
 }
 
-/* sections */
-.wf-doc__section, #overview {
-	margin-bottom: 2rem;
+/* Documentation section */
+.documentation {
+	margin-top: 2rem;
+	padding: 4rem 0;
+	font-family: sans-serif;
+	color: hsl(0, 0%, 90%);
+	background-color: hsl(0, 0%, 20%);
 }
-.wf-doc__section {
-	padding-top: 2rem;
-	border-top: 1px solid #eee;
+.documentation a,
+.documentation a:visited {
+	color: hsl(200, 75%, 50%);
 }
-.wf-doc__section-title {
+.documentation__introduction {
+	padding-bottom: 3rem;
+}
+
+/* menu */
+.documentation__menu {
+}
+.documentation__menu [class^=item] {
+	margin-bottom: 0.33em;
+}
+.documentation__menu .item--disabled {
+	opacity: 0.33;
+	text-decoration: line-through;
+	pointer-events: none;
+}
+.documentation__menu a,
+.documentation__menu a:visited {
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+}
+
+.documentation__heading {
+	font-weight: bold;
+}
+
+/* elements */
+.elements {}
+.element {
+	padding: 4rem 0;
+	border-top: 1px solid hsl(0, 0%, 30%);
+}
+.element__name {
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-/* explanations */
-.wf-doc__explanation {
-}
-.wf-doc__explanation-title {
-	font-weight: bold;
-}
-
 /* class label */
-.wf-doc__class {
+[class^=element__class] {
 	display: inline-block;
-	color: hsl(220, 50%, 50%);
+	color: hsl(330, 80%, 66%);
 	margin-bottom: 0.5rem;
+	font-weight: bold;
+	font-family: monospace;
+}
+.element__class--variant {
+	color: hsl(150, 66%, 50%);
 }
 
-/* demo + code */
-.wf-doc__demo-code {
-	border: 2px solid #f0f0f0;
+/* example */
+.element__example {
+	padding: 2rem;
+	margin-bottom: 2rem;
+	background-color: white;
+	color: #222;
+}
+.element__example:last-child {
+	margin-bottom: 0;
 }
 
-/* demo */
-.wf-doc__demo {
-	padding: 1rem;
+/* preview */
+.element__preview {
 }
 
-/* code */
-.wf-doc__code {
+/* source code */
+pre.element__source {
 	margin: 0;
-}
-.wf-doc__code:before {
-	/*content: "Code :";*/
 }
 
 /* misc */
+
+.documentation .wf-block:last-child {
+	margin-bottom: 0;
+}
+.documentation .code {
+	font-family: monospace;
+	color: hsl(330, 80%, 66%);
+}
+
+/* tooltips */
 .tipsy {
 	font-family: sans-serif;
 	font-size: 0.8rem;
