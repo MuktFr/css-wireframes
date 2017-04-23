@@ -2,7 +2,7 @@
  * Toolbar
  */
 .wf-toolbar {
-	
+
 	position: fixed;
 	bottom: 0;
 	right: $gutter-horizontal;
@@ -10,26 +10,26 @@
 	flex-direction: row wrap;
 	font-family: $font-family-external;
 	font-size: 0.75rem;
-	
+
 	/**
 	 * Toolbar button group
-	 * 
+	 *
 	 * This is a <ul>
 	 */
 	&__btn-group {
 		@extend .list-none;
 		margin: 0;
 	}
-	
+
 	/**
 	 * Toolbar button
 	 *
 	 * This is a <li>
 	 */
 	&__btn {
-		
+
 	}
-	
+
 	/**
 	 * Toolbar link
 	 *
@@ -57,6 +57,7 @@
 		}
 		&:hover, &:focus {
 			background-color: $color-important;
+			color: white;
 		}
 		&--disabled {
 			display: none;

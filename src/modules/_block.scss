@@ -3,7 +3,7 @@
  * Manage wireframe blocks
  * @example
  * 		<div class="wf-block wf-block--important wf-block--filled wf-block--color-red">
- **/ 
+ **/
 .wf-block {
 	@include wf-border;
 	padding: $gutter-vertical $gutter-horizontal;
@@ -16,7 +16,7 @@
 	> * {
 		flex: 0 0 auto; // do not grow or shrink content
 	}
-	
+
 	/**
 	 * Block label
 	 */
@@ -27,7 +27,7 @@
 		background-color: inherit;
 		font-weight: 600;
 	}
-	
+
 	/**
 	 * Take all the place
 	 */
@@ -35,14 +35,14 @@
 		width: 100%;
 		height: 100%;
 	}
-	
+
 	/**
 	 * Put diagonals inside the block
 	 */
 	&--crossed {
 		@include background-crossed;
 	}
-	
+
 	/**
 	 * Make borders more visible
 	 */
@@ -50,7 +50,7 @@
 		border: 1px solid $color-important;
 		box-shadow: inset 0 0 0 1px $color-important;
 	}
-	
+
 	/**
 	 * Dark background
 	 */
@@ -64,7 +64,7 @@
 			color: lighten($color-dark, 50%);
 		}
 	}
-	
+
 	/**
 	 * Light background
 	 */
@@ -78,7 +78,7 @@
 			color: darken($color-light, 40%);
 		}
 	}
-	
+
 	/**
 	 * Gray background
 	 */
@@ -92,7 +92,7 @@
 			color: darken($color-gray, 40%);
 		}
 	}
-	
+
 	/**
 	 * Light gray background
 	 */
@@ -106,7 +106,7 @@
 			color: darken($color-gray-light, 40%);
 		}
 	}
-	
+
 	/**
 	 * Put a red background
 	 */
