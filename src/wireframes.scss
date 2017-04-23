@@ -23,9 +23,9 @@
 @import "helpers";
 
 /* Modules */
-@import "modules/text"; // Create pseudo text with block characters
-@import "modules/blocks"; // Manage wireframe blocks
-@import "modules/notes"; // Manage notes
+@import "modules/text"; // Dummy text
+@import "modules/block"; // Manage wireframe blocks
+@import "modules/note"; // Manage notes
 @import "modules/media"; // Manage medias
 @import "modules/optional"; // Manage optional elements
 @import "modules/toolbar"; // Manage toolbar
