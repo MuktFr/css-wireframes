@@ -61,7 +61,7 @@
 /* class label */
 [class^=element__class] {
 	display: inline-block;
-	color: hsl(330, 80%, 66%);
+	color: hsl(330, 100%, 66%);
 	margin-bottom: 0.5rem;
 	font-weight: bold;
 	font-family: monospace;
@@ -72,9 +72,9 @@
 
 /* example */
 .element__example {
-	padding: 2rem;
+	/*padding: 2rem;*/
 	margin-bottom: 2rem;
-	background-color: white;
+	/*background-color: white;*/
 	color: #222;
 }
 .element__example:last-child {
@@ -97,7 +97,7 @@ pre.element__source {
 }
 .documentation .code {
 	font-family: monospace;
-	color: hsl(330, 80%, 66%);
+	color: hsl(330, 100%, 66%);
 }
 
 /* tooltips */
