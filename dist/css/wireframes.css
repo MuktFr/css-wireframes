@@ -1253,11 +1253,13 @@ a, a:visited {
   padding: 1em;
   font-size: 0.85em;
   position: absolute;
-  top: -1em;
+  top: -0.5em;
   right: -1em;
   -webkit-transform: rotate(4deg);
           transform: rotate(4deg);
   z-index: 100; }
+  .wf-optional .wf-note {
+    position: absolute; }
   .wf-note:before {
     content: '';
     position: absolute;
@@ -1365,10 +1367,16 @@ a, a:visited {
     font-family: sans-serif;
     text-decoration: none;
     line-height: 15px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-weight: bold;
     transition: opacity 0.25s; }
     .wf-optional__close:hover, .wf-optional__close:focus {
       background-color: #1c1e22; }
+    .wf-block > .wf-optional__close,
+    .wf-note > .wf-optional__close {
+      top: -1px;
+      left: -1px;
+      border-radius: 0 2px 2px 0; }
 
 /**
  * Toolbar

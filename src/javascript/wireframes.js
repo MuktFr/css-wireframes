@@ -9,8 +9,8 @@ function css_wireframes_init(){
 		/**
 		 * Insert the toolbar at the end of the document
 		 *
-		 * [TODO] For the moment we add a single button, 
-		 * but it could contain several ones in the future. 
+		 * [TODO] For the moment we add a single button,
+		 * but it could contain several ones in the future.
 		 * So the populating should be expendable.
 		 */
 		var insert_toolbar = function(){
@@ -35,6 +35,12 @@ function css_wireframes_init(){
 
 			// Declare an empty hidden elements list
 			var hidden_elements = [];
+
+			// Make all notes optional
+			var notes = document.getElementsByClassName('wf-note');
+			for (var i = 0; i < notes.length; i++) {
+				notes[i].classList.add('wf-optional');
+			}
 
 			// Add the close button to each optional element
 			var optional_elements = document.getElementsByClassName('wf-optional');
