@@ -22,6 +22,8 @@
 	<!-- Documentation CSS And Javascript -->
 	<link rel="stylesheet" href="css/documentation.css" type="text/css" />
 	<script src="javascript/documentation.js"></script>
+	<!-- Google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
 </head>
 
@@ -143,14 +145,21 @@
 				<!-- Elements -->
 				<div class="col-sm-8 col-md-10">
 
+					<h1 class="documentation__heading">Documentation</h1>
+
 					<div class="documentation__introduction">
-						<h2 class="documentation__heading">Syntax and naming convention</h2>
+						<h2 class="documentation__heading">CSS selectors naming convention</h2>
 						<p>
-							All the framework classes are prefixed with <strong>wf-</strong> : <span class="code">wf-block</span>, <span class="code">wf-note</span>, etc.
-							<br>Furthermore, we use the <a href="https://en.bem.info/methodology/naming-convention/">BEM naming convention</a>. In a nutshell, modifiers look like this : <span class="code">element--modifier</span>, and child elements look like this : <span class="code">element__child</span>.
-							<br>Also, always use modifiers <strong>in conjonction</strong> to the basic class, like so : <span class="code">class="wf-something wf-something--modifier"</span>.
-							<br>Please note that we use a bit a flexbox, transformations and such, which rules out old outdated browsers.
+							All the framework classes are prefixed with &ldquo;<strong>wf-</strong>&rdquo; : <span class="code">wf-block</span>, <span class="code">wf-note</span>, etc.
+							<br>Furthermore, we use the <a href="https://en.bem.info/methodology/naming-convention/">BEM naming convention</a>. It stands for <strong>B</strong>lock <strong>E</strong>lement <strong>M</strong>odifier, and in a nutshell, is a practicall way to make names of CSS selectors as informative and clear as possible. It looks like this : <span class="code">block__element--modifier</span>.
+							<br>In our framework, use modifiers <strong>in conjonction</strong> to the basic class, like so : <span class="code">class="wf-something wf-something--modifier"</span>.
+							<br>Please note that we use a bit a flexbox, transformations and such, so old outdated browsers are a no no!
 						</p>
+						<h2 class="documentation__heading">Color scheme</h2>
+						<p>
+							The framework is monochrome, without even any shades of grays. That is by choice : the sole purpose of a wireframe is to show the <strong>layout</strong> of the page, it should not convey any information about its theme. There are a few color variants available, only to be used for very specific cases.
+						<p>
+
 					</div>
 
 					<div class="documentation__elements">
@@ -159,8 +168,8 @@
 						<section id="block" class="element">
 							<h2 class="element__name documentation__heading">Block</h2>
 							<p>
-								A block is the most basic element, you can use it to highlight some contents of your page.
-								<br>Blocks can be labelled, be optionals, fill their container, and have a few graphical variants which can be combined together.
+								A &ldquo;block&rdquo; allow you to materialize sections of your page.
+								<br>They can be labelled, and have a few graphical variants which can be combined together.
 							</p>
 							<!-- basic block -->
 							<label class="element__class">.wf-block</label>
@@ -168,19 +177,19 @@
 								<div class="row align-items-start">
 									<div class="col-md-4">
 										<div class="element__preview">
-											<div class="wf-block">Some content.</div>
+											<div class="wf-block"></div>
 										</div>
 									</div>
 									<div class="col-md-8">
 										<pre class="element__source">
-<code>&lt;div class=&quot;wf-block&quot;&gt;Some content.&lt;/div&gt;</code></pre>
+<code>&lt;div class=&quot;wf-block&quot;&gt;&lt;/div&gt;</code></pre>
 									</div>
 								</div>
 							</div>
 							<!-- labelled blocks -->
 							<label class="element__class">.wf-block__label</label>
 							<p>
-								Blocks can be labelled, the label is centered horizontally and vertically.
+								Blocks can have a label, which is centered horizontally and vertically. When labelled, a block is supposed to contain <strong>only</strong> the label, and no other content.
 							</p>
 							<div class="element__example">
 								<div class="row align-items-start">
@@ -218,7 +227,7 @@
 							<!-- colored block  -->
 							<label class="element__class">.wf-block</label><label class="element__class--variant">.wf-block--color-[color name]</label>
 							<p>
-								Add a colored background : dark, light, red, green, yellow, pink.
+								Colored background to highlight some blocks : dark, light, red, green, yellow, pink.
 							</p>
 							<div class="element__example">
 								<div class="row align-items-start">
@@ -296,6 +305,8 @@
 						<li class="item item--disabled"><a href="#form">Forms</a></li>
 						<li class="item item--disabled"><a href="#tabs">Tabs</a></li>
 						<li class="item item--disabled"><a href="#list">Elements list</a></li>
+						<li class="item item--disabled"><a href="#icons">Icons</a></li>
+						<li class="item item--disabled"><a href="#helpers">Helpers</a></li>
 					</ul>
 				</div>
 
