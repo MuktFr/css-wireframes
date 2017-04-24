@@ -1255,7 +1255,7 @@ a, a:visited {
   color: #2e5cb8;
   background-color: white;
   box-shadow: -2px 2px 0 rgba(46, 92, 184, 0.1);
-  display: block;
+  display: inline-block;
   padding: 1em;
   font-size: 0.85em;
   position: absolute;

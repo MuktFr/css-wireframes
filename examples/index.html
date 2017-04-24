@@ -149,9 +149,9 @@
 					<div class="documentation__introduction">
 						<h2 class="documentation__heading">CSS selectors naming convention</h2>
 						<p>
-							All the framework classes are prefixed with &ldquo;<strong>wf-</strong>&rdquo; : <span class="code">wf-block</span>, <span class="code">wf-note</span>, etc.
-							<br>Furthermore, we use the <a href="https://en.bem.info/methodology/naming-convention/">BEM naming convention</a>. It stands for <strong>B</strong>lock <strong>E</strong>lement <strong>M</strong>odifier, and in a nutshell, is a practicall way to make names of CSS selectors as informative and clear as possible. It looks like this : <span class="code">block__element--modifier</span>.
-							<br>Use modifiers <strong>in conjonction</strong> to the basic class, like so : <span class="code">class="wf-something wf-something--modifier"</span>.
+							All the framework classes are prefixed with &ldquo;<strong>wf-</strong>&rdquo; : <code>wf-block</code>, <code>wf-note</code>, etc.
+							<br>Furthermore, we use the <a href="https://en.bem.info/methodology/naming-convention/">BEM naming convention</a>. It stands for <strong>B</strong>lock <strong>E</strong>lement <strong>M</strong>odifier, and in a nutshell, is a practicall way to make names of CSS selectors as informative and clear as possible. It looks like this : <code>block__element--modifier</code>.
+							<br>Use modifiers <strong>in conjonction</strong> to the basic class, like so : <code>class="wf-something wf-something--modifier"</code>.
 							<br>Please note that there's a bit a flexbox, transformations and such, so old outdated browsers are a no no!
 						</p>
 						<h2 class="documentation__heading">Color scheme</h2>
@@ -231,7 +231,7 @@
 							<div class="element__example">
 								<div class="row align-items-start">
 									<div class="col-md-4">
-										<div class="element__preview" style="height: 6rem">
+										<div class="element__preview" style="height: 100%">
 											<div class="wf-block wf-block--fill"></div>
 										</div>
 									</div>
@@ -320,13 +320,110 @@
 						<!-- #media -->
 						<section id="media" class="element">
 							<h2 class="element__name documentation__heading">Media</h2>
-							<p>TODO</p>
+							<p>
+								This class turn any <code>&lt;img&gt;</code> into a placeholder media : image, audio file or video.
+								<br>Ideally the image should be transparent.
+							</p>
+							<p>
+								For convenience, there are several images provided in the <strong>images/</strong> folder, with the most common ratios : square, portrait, landscape, etc.
+								<br>In short, choose the ratio you like, put a width or a height and you're done.
+							</p>
+							<div class="element__example">
+								<div class="row align-items-center">
+									<div class="col text-center">
+										1/1 <br><img src="../dist/images/ratio-1-1.png" width="100" class="wf-media">
+									</div>
+									<div class="col text-center">
+										4/3 <br><img src="../dist/images/ratio-4-3.png" width="100" class="wf-media">
+									</div>
+									<div class="col text-center">
+										16/9 <br><img src="../dist/images/ratio-16-9.png" width="100" class="wf-media">
+									</div>
+									<div class="col text-center">
+										2/1 <br><img src="../dist/images/ratio-2-1.png" width="100" class="wf-media">
+									</div>
+									<div class="col text-center">
+										3/1 <br><img src="../dist/images/ratio-3-1.png" width="100" class="wf-media">
+									</div>
+								</div>
+							</div>
+							<label class="element__class">.wf-media</label>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-4">
+										<div class="element__preview">
+											<img src="../dist/images/ratio-1-1.png" width="130" class="wf-media">
+										</div>
+									</div>
+									<div class="col-md-8">
+										<pre class="element__source">
+<code>&lt;img&#10;&Tab;src=&quot;images/ratio-1-1.png&quot;&#10;&Tab;width=&quot;130&quot;&#10;&Tab;class=&quot;wf-media&quot;&gt;</code></pre>
+									</div>
+								</div>
+							</div>
+							<label class="element__class">.wf-media</label><label class="element__class element__class--variant">.wf-media--dark</label>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-4">
+										<div class="element__preview">
+											<img src="../dist/images/ratio-1-1.png" width="130" class="wf-media wf-media--dark">
+										</div>
+									</div>
+									<div class="col-md-8">
+										<pre class="element__source">
+<code>&lt;img&#10;&Tab;src=&quot;images/ratio-1-1.png&quot;&#10;&Tab;width=&quot;130&quot;&#10;&Tab;class=&quot;wf-media wf-media--dark&quot;&gt;</code></pre>
+									</div>
+								</div>
+							</div>
+							<label class="element__class">.wf-media</label><label class="element__class element__class--variant">.wf-media--video</label>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-4">
+										<div class="element__preview">
+											<img src="../dist/images/ratio-4-3.png" width="165" class="wf-media wf-media--video">
+										</div>
+									</div>
+									<div class="col-md-8">
+										<pre class="element__source">
+<code>&lt;img&#10;&Tab;src=&quot;images/ratio-4-3.png&quot;&#10;&Tab;width=&quot;165&quot;&#10;&Tab;class=&quot;wf-media wf-media--video&quot;&gt;</code></pre>
+									</div>
+								</div>
+							</div>
+							<label class="element__class">.wf-media</label><label class="element__class element__class--variant">.wf-media--audio</label>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-4">
+										<div class="element__preview">
+											<img src="../dist/images/ratio-16-9.png" width="220" class="wf-media wf-media--audio">
+										</div>
+									</div>
+									<div class="col-md-8">
+										<pre class="element__source">
+<code>&lt;img&#10;&Tab;src=&quot;images/ratio-16-9.png&quot;&#10;&Tab;width=&quot;220&quot;&#10;&Tab;class=&quot;wf-media wf-media--audio&quot;&gt;</code></pre>
+									</div>
+								</div>
+							</div>
 						</section>
 
 						<!-- #note -->
 						<section id="note" class="element">
 							<h2 class="element__name documentation__heading">Note</h2>
-							<p>TODO</p>
+							<p>
+								Use notes to add comments about any elements (typically blocks). They can be hidden. They are dispayed on the top right corner of their parent.
+							</p>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-4">
+										<div class="element__preview">
+											<span class="wf-note">A usefull comment</span>
+										</div>
+									</div>
+									<div class="col-md-8">
+										<pre class="element__source">
+<code>&lt;div class=&quot;wf-note&quot;&gt;A usefull comment&lt;/div&gt;</code></pre>
+									</div>
+								</div>
+							</div>
 						</section>
 
 					</div>
