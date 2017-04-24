@@ -1077,7 +1077,8 @@ a, a:visited {
     background-color: #676f7e;
     color: transparent;
     font-size: 0.5em;
-    line-height: 2.5; }
+    line-height: 2.5;
+    letter-spacing: 0.55em; }
     .wf-text-lines a {
       color: inherit;
       background-color: #2e539e; }
