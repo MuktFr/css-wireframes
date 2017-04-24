@@ -98,6 +98,16 @@ pre.element__source {
 
 /* misc */
 
+#icons .element__preview .col {
+	text-align: center;
+	flex: 1 0 6rem;
+	margin-bottom: 1em;
+}
+#icons .element__preview small {
+	display: block;
+	color: hsl(0, 0%, 60%);
+}
+
 .documentation .wf-block:last-child {
 	margin-bottom: 0;
 }
