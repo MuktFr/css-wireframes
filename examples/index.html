@@ -139,25 +139,24 @@
 
 	<!-- #documentation : gives a detailled explanation of each element -->
 	<section id="documentation" class="documentation language-html">
+		<h1 class="documentation__heading documentation__title">Documentation</h1>
 		<div class="container">
 			<div class="row">
 
 				<!-- Elements -->
 				<div class="col-sm-8 col-md-10">
 
-					<h1 class="documentation__heading">Documentation</h1>
-
 					<div class="documentation__introduction">
 						<h2 class="documentation__heading">CSS selectors naming convention</h2>
 						<p>
 							All the framework classes are prefixed with &ldquo;<strong>wf-</strong>&rdquo; : <span class="code">wf-block</span>, <span class="code">wf-note</span>, etc.
 							<br>Furthermore, we use the <a href="https://en.bem.info/methodology/naming-convention/">BEM naming convention</a>. It stands for <strong>B</strong>lock <strong>E</strong>lement <strong>M</strong>odifier, and in a nutshell, is a practicall way to make names of CSS selectors as informative and clear as possible. It looks like this : <span class="code">block__element--modifier</span>.
-							<br>In our framework, use modifiers <strong>in conjonction</strong> to the basic class, like so : <span class="code">class="wf-something wf-something--modifier"</span>.
-							<br>Please note that we use a bit a flexbox, transformations and such, so old outdated browsers are a no no!
+							<br>Use modifiers <strong>in conjonction</strong> to the basic class, like so : <span class="code">class="wf-something wf-something--modifier"</span>.
+							<br>Please note that there's a bit a flexbox, transformations and such, so old outdated browsers are a no no!
 						</p>
 						<h2 class="documentation__heading">Color scheme</h2>
 						<p>
-							The framework is monochrome, without even any shades of grays. That is by choice : the sole purpose of a wireframe is to show the <strong>layout</strong> of the page, it should not convey any information about its theme. There are a few color variants available, only to be used for very specific cases.
+							The framework is monochrome, that is by choice : the sole purpose of a wireframe is to show the <strong>layout</strong> of the page, it should not convey any information about its theme. There are a few colored elements available, but they should only be used in very specific cases.
 						<p>
 
 					</div>
@@ -167,12 +166,12 @@
 						<!-- #block -->
 						<section id="block" class="element">
 							<h2 class="element__name documentation__heading">Block</h2>
-							<p>
-								A &ldquo;block&rdquo; allow you to materialize sections of your page.
-								<br>They can be labelled, and have a few graphical variants which can be combined together.
-							</p>
 							<!-- basic block -->
 							<label class="element__class">.wf-block</label>
+							<p>
+								A &ldquo;block&rdquo; allow you to materialize sections of your page.
+								<br>Basically, it's just a border with a bit of padding.
+							</p>
 							<div class="element__example">
 								<div class="row align-items-start">
 									<div class="col-md-4">
@@ -224,6 +223,24 @@
 									</div>
 								</div>
 							</div>
+							<!-- filler block -->
+							<label class="element__class">.wf-block</label><label class="element__class--variant">.wf-block--fill</label>
+							<p>
+								Make the block fill its container.
+							</p>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-4">
+										<div class="element__preview" style="height: 6rem">
+											<div class="wf-block wf-block--fill"></div>
+										</div>
+									</div>
+									<div class="col-md-8">
+										<pre class="element__source">
+<code>&lt;div style=&quot;height: 6rem&quot;&gt;&#10;&Tab;&lt;div class=&quot;wf-block wf-block--fill&quot;&gt;&lt;/div&gt;&#10;&lt;/div&gt;</code></pre>
+									</div>
+								</div>
+							</div>
 							<!-- colored block  -->
 							<label class="element__class">.wf-block</label><label class="element__class--variant">.wf-block--color-[color name]</label>
 							<p>
@@ -252,14 +269,12 @@
 						<!-- #text -->
 						<section id="text" class="element">
 							<h2 class="element__name documentation__heading">Text</h2>
-							<h3 class="documentation__heading">Text lines</h3>
-							<p>
-								Use dummy text lines to obtain less distracting text.
-								<br>it must be applied <strong>only on inline elements.</strong>
-							</p>
-							<!-- Class name -->
+							<!-- Line text -->
 							<label class="element__class">.wf-text-lines</label>
-							<!-- Example : preview + source -->
+							<p>
+								Makes the text more abstract and less distracting by displaying it as lines.
+								<br>It must be applied only on <strong>inline elements.</strong>
+							</p>
 							<div class="element__example">
 								<div class="row align-items-start">
 									<div class="col-md-4">
@@ -274,6 +289,29 @@
 									<div class="col-md-8">
 										<pre class="element__source">
 <code>&lt;span class=&quot;wf-text-lines&quot;&gt;&#10;&Tab;Vestibulum cras condimentum dis ullamcorper.&#10;&Tab;&lt;br&gt;Vestibulum cras condimentum.&#10;&Tab;&lt;br&gt;Condimentum dis Vestibulum cras condimentum dis ullamcorper.&#10;&lt;/span&gt;</code></pre>
+									</div>
+								</div>
+							</div>
+							<!-- Block text -->
+							<label class="element__class">.wf-text-words</label>
+							<p>
+								Similar to line text, except each word is visible.
+								<br>Can be applied on any element.
+							</p>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-4">
+										<div class="element__preview">
+											<span class="wf-text-words">
+												Vestibulum cras condimentum dis ullamcorper.
+												<br>Vestibulum cras condimentum.
+												<br>Condimentum dis Vestibulum cras condimentum dis ullamcorper.
+											</span>
+										</div>
+									</div>
+									<div class="col-md-8">
+										<pre class="element__source">
+<code>&lt;span class=&quot;wf-text-words&quot;&gt;&#10;&Tab;Vestibulum cras condimentum dis ullamcorper.&#10;&Tab;&lt;br&gt;Vestibulum cras condimentum.&#10;&Tab;&lt;br&gt;Condimentum dis Vestibulum cras condimentum dis ullamcorper.&#10;&lt;/span&gt;</code></pre>
 									</div>
 								</div>
 							</div>
