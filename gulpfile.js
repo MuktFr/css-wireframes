@@ -40,9 +40,9 @@ gulp.task('autoprefixer', function() {
 
 // Task : converts all data found within a stylesheet into base64-encoded data URI strings
 gulp.task('base64', function() {
-    return gulp.src('./dist/css/*.css')
+    return gulp.src('./dist/css/wireframes.css')
         .pipe(cssBase64({
-            maxWeightResource: 50,
+            maxWeightResource: 131072,
             //baseDir: "./src" // doesn't seem to work ?
         }))
         .pipe(gulp.dest('./dist/css'));
