@@ -19,20 +19,22 @@ gulp.task('default', function() {});
 // Monitor changes on files and launch various tasks
 gulp.task('watch', function() {
     // CSS stuff
-    gulp.watch('./src/**/*.scss', gulp.task('build-css'));
+    gulp.watch('./src/**/*.scss', gulp.series('sass', 'autoprefixer', 'base64', 'minify-css', 'sourcemaps'));
     // Javascript stuff
-    gulp.watch('./src/javascript/*.js', gulp.series('build-js'));
+    gulp.watch('./src/javascript/*.js', gulp.series('minify-js'));
     // Fontello
-    gulp.watch('./src/config.json', gulp.series('fontello-import', 'fontello-deploy', 'build-css'));
+    gulp.watch('./src/config.json', gulp.series('fontello-import', 'fontello-deploy'));
 });
 
 // Chain of tasks to build the CSS
+// FIXME : doesn't work !
 gulp.task('build-css', function(done) {
     gulp.series('sass', 'autoprefixer', 'base64', 'minify-css', 'sourcemaps');
     done();
 });
 
 // Chain of tasks to build the Javascript (well, only one task at the moment)
+// FIXME : doesn't work !
 gulp.task('build-js', function(done) {
     gulp.series('minify-js');
     done();

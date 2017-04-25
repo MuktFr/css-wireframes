@@ -949,6 +949,9 @@ Styleguide tinytypo.print
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
+  font-size: 1.5em;
+  -webkit-transform: inherit;
+          transform: inherit;
   speak: none;
   display: inline-block;
   text-decoration: inherit;

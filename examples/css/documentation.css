@@ -106,6 +106,7 @@ pre.element__source {
 #icons .element__preview small {
 	display: block;
 	color: hsl(0, 0%, 60%);
+	margin-bottom: 0.2em;
 }
 
 .documentation .wf-block:last-child {
