@@ -910,6 +910,25 @@ Styleguide tinytypo.print
 /**
  * Add a diagonal background image
  */
+/**
+ * Force an aspect ratio
+ *
+ * https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ *
+ * By default, it produces a 1:1 aspect ratio
+ * For other ratios, it must be used in conjonction with aspect-ratio-variant
+ *
+ * The element must have a child wrapping its content
+ * 		<div class="wf-ratio--16-9">
+ * 			<div class="wf-wrapper"></div>
+ * 		</div>
+ */
+/**
+ * Force an aspect ratio
+ *
+ * Must be used in conjonction with aspect-ratio-common
+ * @see mixin aspect-ratio
+ */
 /* Fonts */
 /**
  * Blocky font
@@ -1246,6 +1265,74 @@ a, a:visited {
   margin: 0;
   line-height: 0; }
 
+/**
+ * Force an aspect ratio for a block element
+ *
+ * If any, the content **must** be in a .wf-wrapper
+ *
+ * @example
+ * 		<div class="wf-block wf-ratio--16-9">
+ * 			<div class="wf-wrapper">some content</div>
+ * 		</div>
+ */
+[class*=wf-ratio],
+[class*=wf-][class*=wf-ratio] {
+  position: relative;
+  display: block; }
+  [class*=wf-ratio]:before,
+  [class*=wf-][class*=wf-ratio]:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: 100%; }
+  [class*=wf-ratio] > .wf-wrapper,
+  [class*=wf-][class*=wf-ratio] > .wf-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: inherit; }
+
+.wf-ratio,
+[class*=wf-].wf-ratio {
+  /* square */
+  /* landscape */
+  /* portrait */ }
+  .wf-ratio--1-1:before,
+  [class*=wf-].wf-ratio--1-1:before {
+    padding-top: 100%; }
+  .wf-ratio--3-1:before,
+  [class*=wf-].wf-ratio--3-1:before {
+    padding-top: 33.33333%; }
+  .wf-ratio--2-1:before,
+  [class*=wf-].wf-ratio--2-1:before {
+    padding-top: 50%; }
+  .wf-ratio--16-9:before,
+  [class*=wf-].wf-ratio--16-9:before {
+    padding-top: 56.25%; }
+  .wf-ratio--4-3:before,
+  [class*=wf-].wf-ratio--4-3:before {
+    padding-top: 75%; }
+  .wf-ratio--3-2:before,
+  [class*=wf-].wf-ratio--3-2:before {
+    padding-top: 66.66667%; }
+  .wf-ratio--1-3:before,
+  [class*=wf-].wf-ratio--1-3:before {
+    padding-top: 300%; }
+  .wf-ratio--1-2:before,
+  [class*=wf-].wf-ratio--1-2:before {
+    padding-top: 200%; }
+  .wf-ratio--9-16:before,
+  [class*=wf-].wf-ratio--9-16:before {
+    padding-top: 177.77778%; }
+  .wf-ratio--3-4:before,
+  [class*=wf-].wf-ratio--3-4:before {
+    padding-top: 133.33333%; }
+  .wf-ratio--2-3:before,
+  [class*=wf-].wf-ratio--2-3:before {
+    padding-top: 150%; }
+
 /* Modules */
 /* Not readable texts, just for the grey */
 .wf-text {
@@ -1303,16 +1390,15 @@ a, a:visited {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row wrap;
-          flex-direction: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  /**
+	 * Block content wrapper
+	 *
+	 * This is only needed if there is an aspect ratio applied
+	 */
   /**
 	 * Block label
 	 */
@@ -1349,15 +1435,17 @@ a, a:visited {
   /**
 	 * Put a pink background
 	 */ }
-  .wf-block > * {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto; }
+  .wf-block > .wf-wrapper, .wf-block__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    height: 100%; }
   .wf-block__label {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin: 0 auto;
+    margin: auto auto;
     padding: 0.5rem 0.5rem;
     background-color: inherit;
     font-weight: 600; }
@@ -1455,7 +1543,7 @@ a, a:visited {
   -webkit-transform: rotate(4deg);
           transform: rotate(4deg);
   z-index: 100; }
-  .wf-optional .wf-note {
+  .wf-optional .wf-note, .wf-note.wf-optional {
     position: absolute; }
   .wf-note:before {
     content: '';
@@ -1547,7 +1635,7 @@ a, a:visited {
 	 * @note
 	 * By default, it is positioned according to the Bootstrap grid
 	 */ }
-  .wf-optional:hover .wf-optional__close {
+  .wf-optional:hover > .wf-optional__close {
     opacity: 1;
     color: white; }
   .wf-optional__close {

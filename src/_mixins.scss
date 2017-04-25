@@ -28,3 +28,47 @@
 			rgba($color, 0) calc(50% + 0.8px),
 			rgba($color, 0) 100%);
 }
+
+/**
+ * Force an aspect ratio
+ *
+ * https://css-tricks.com/snippets/sass/maintain-aspect-ratio-mixin/
+ *
+ * By default, it produces a 1:1 aspect ratio
+ * For other ratios, it must be used in conjonction with aspect-ratio-variant
+ *
+ * The element must have a child wrapping its content
+ * 		<div class="wf-ratio--16-9">
+ * 			<div class="wf-wrapper"></div>
+ * 		</div>
+ */
+@mixin aspect-ratio-common($content: '.wf-wrapper') {
+	position: relative;
+	display: block; // ensure to avoid bug in firefox with display: flex
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: 100%;
+	}
+	> #{$content} {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: inherit;
+	}
+}
+
+/**
+ * Force an aspect ratio
+ *
+ * Must be used in conjonction with aspect-ratio-common
+ * @see mixin aspect-ratio
+ */
+@mixin aspect-ratio-variant($width, $height) {
+	&:before {
+		padding-top: ($height / $width) * 100%;
+	}
+}

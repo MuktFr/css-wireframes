@@ -22,8 +22,9 @@
 	padding: 1em;
 	font-size: 0.85em;
 	position: absolute;
-	.wf-optional & {
-		position: absolute; // counter the position:relative
+	.wf-optional &,
+	&.wf-optional {
+		position: absolute; // counter the wf-optional position:relative
 	}
 	top: -0.5em;
 	right: -1em;

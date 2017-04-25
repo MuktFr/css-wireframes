@@ -10,19 +10,25 @@
 	margin-bottom: $gutter-vertical;
 	position: relative;
 	display: flex;
-	flex-direction: row wrap;
-	justify-content: flex-start; // content to the top
-	align-items: flex-start; // content to the left
-	> * {
-		flex: 0 0 auto; // do not grow or shrink content
+	flex-flow: column nowrap;
+
+	/**
+	 * Block content wrapper
+	 *
+	 * This is only needed if there is an aspect ratio applied
+	 */
+	> .wf-wrapper,
+	&__content {
+		display: flex;
+		flex-flow: column nowrap;
+		height: 100%;
 	}
 
 	/**
 	 * Block label
 	 */
 	&__label {
-		align-self: center; // centered vertically
-		margin: 0 auto; // centered horizontally
+		margin: auto auto; // centered horizontally and vertically
 		padding: $gutter-vertical/2 $gutter-horizontal/2;
 		background-color: inherit;
 		font-weight: 600;

@@ -5,7 +5,7 @@
 	position: relative;
 	transition: all 1s; // for nice transitions when hidden
 
-	&:hover .wf-optional__close {
+	&:hover > .wf-optional__close {
 		opacity: 1;
 		color: white;
 	}
