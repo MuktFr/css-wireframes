@@ -1,6 +1,4 @@
-# css-wireframes
-
-![CSS Wireframes Logo](images/css-wireframes-logo-32.png)
+# ![CSS Wireframes Logo](images/css-wireframes-logo-32.png) css-wireframes
 
 A CSS framework to quickly design responsive wireframes directly in HTML.
 
