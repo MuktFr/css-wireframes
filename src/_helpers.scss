@@ -12,7 +12,8 @@
  * We specifically add .wf-block to ensure .wf-margin has priority
  */
 .wf-margin,
-.wf-block.wf-margin {
+[class].wf-margin // for priority
+{
 	&--all {
 		margin: $gutter-horizontal $gutter-vertical;
 		&--large {
@@ -59,7 +60,8 @@
  * We specifically add .wf-block to ensure .wf-padding has priority
  */
 .wf-padding,
-.wf-block.wf-padding {
+[class].wf-padding  // for priority
+{
 	&--all {
 		padding: $gutter-horizontal $gutter-vertical;
 		&--large {
@@ -98,7 +100,8 @@
  * Does not use display: none; so you can have animations
  */
 .wf-hidden,
-[class].wf-hidden {
+[class].wf-hidden  // for priority
+{
 	opacity: 0;
 	overflow: hidden;
 	width: 0;
@@ -122,18 +125,21 @@
  * 		</div>
  */
 [class*=wf-ratio],
-[class*=wf-][class*=wf-ratio] // ugly way to have priority
+[class][class*=wf-ratio] // for priority
 {
 	@include aspect-ratio-common;
 }
 .wf-ratio,
-[class*=wf-].wf-ratio // ugly way to have priority
+[class].wf-ratio // for priority
 {
 	/* square */
 	&--1-1 {
 		@include aspect-ratio-variant(1, 1);
 	}
 	/* landscape */
+	&--4-1 {
+		@include aspect-ratio-variant(4, 1);
+	}
 	&--3-1 {
 		@include aspect-ratio-variant(3, 1);
 	}
@@ -150,6 +156,9 @@
 		@include aspect-ratio-variant(3, 2);
 	}
 	/* portrait */
+	&--1-4 {
+		@include aspect-ratio-variant(1, 4);
+	}
 	&--1-3 {
 		@include aspect-ratio-variant(1, 3);
 	}
@@ -174,7 +183,8 @@
  * 		<div class="wf-media wf-width-p--10"></div>
  */
 .wf-width,
-[class|=wf].wf-width {
+[class].wf-width // for priority
+{
 	/* 5 to 100, in 5 increments */
 	@for $i from 1 through 20 {
 		$width: $i*5;
@@ -191,7 +201,8 @@
  * 		<div class="wf-media wf-width--10"></div>
  */
 .wf-width,
-[class|=wf].wf-width {
+[class].wf-width // for priority
+{
 	/* 5 to 30, in 5 increments */
 	@for $i from 1 through 6 {
 		$width: $i*5;
