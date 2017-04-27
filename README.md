@@ -48,7 +48,7 @@ A CSS framework to quickly design responsive wireframes directly in HTML.
 
 ## Documentation
 
-Checkout [our documentation](http://wireframes.ldd.fr/examples/) for a live demo and detailled explanations.
+Check out [our documentation](http://wireframes.ldd.fr/examples/) for a live demo and detailled explanations.
 
 ## Credits
 
