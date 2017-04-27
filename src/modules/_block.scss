@@ -17,8 +17,7 @@
 	 *
 	 * This is only needed if there is an aspect ratio applied
 	 */
-	> .wf-wrapper,
-	&__content {
+	> .wf-wrapper {
 		display: flex;
 		flex-flow: column nowrap;
 		height: 100%;
@@ -72,6 +71,7 @@
 		}
 		.wf-block__label {
 			color: lighten($color-dark, 50%);
+			background-color: $color-dark;
 		}
 	}
 
@@ -86,6 +86,7 @@
 		}
 		.wf-block__label {
 			color: darken($color-light, 40%);
+			background-color: $color-light;
 		}
 	}
 
@@ -100,6 +101,7 @@
 		}
 		.wf-block__label {
 			color: darken($color-gray, 40%);
+			background-color: $color-gray;
 		}
 	}
 
@@ -114,6 +116,7 @@
 		}
 		.wf-block__label {
 			color: darken($color-gray-light, 40%);
+			background-color: $color-gray-light;
 		}
 	}
 
@@ -128,6 +131,7 @@
 		}
 		.wf-block__label {
 			color: darken($color-red, 40%);
+			background-color: $color-red;
 		}
 	}
 
@@ -142,6 +146,7 @@
 		}
 		.wf-block__label {
 			color: darken($color-green, 40%);
+			background-color: $color-green;
 		}
 	}
 
@@ -156,6 +161,7 @@
 		}
 		.wf-block__label {
 			color: darken($color-yellow, 40%);
+			background-color: $color-yellow;
 		}
 	}
 
@@ -170,6 +176,7 @@
 		}
 		.wf-block__label {
 			color: darken($color-pink, 40%);
+			background-color: $color-pink;
 		}
 	}
 }
