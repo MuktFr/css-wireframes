@@ -213,7 +213,16 @@
 }
 
 /**
+ * Make a block level item's position relative
+ */
+.wf-relative {
+	position: relative;
+}
+
+/**
  * Horizontal separator
+ *
+ * [FIXME] should this be in its own module ?
  *
  * @example
  *		<hr class="wf-separator">
