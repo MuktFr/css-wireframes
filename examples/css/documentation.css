@@ -100,9 +100,8 @@ pre.element__source {
 
 /* misc */
 
-#icon .element__preview .col {
+#icon .element__preview [class|=col] {
 	text-align: center;
-	flex: 1 0 6rem;
 	margin-bottom: 1em;
 }
 #icon .element__preview small {
