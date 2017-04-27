@@ -50,8 +50,8 @@ A CSS framework to quickly design responsive wireframes directly in HTML.
 
 Checkout [our documentation](http://wireframes.ldd.fr/examples/) for a live demo and detailled explanations.
 
-##Credits
+## Credits
 
-###Icon set
+### Icon set
 The icons are based on the [sketchy icon set by Alice Mortaro](https://thenounproject.com/allie.fanni/collection/sketchy-wireframe/) .
 Licence : [Creative Commons](http://creativecommons.org/licenses/by/3.0/us/) 
