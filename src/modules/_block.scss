@@ -30,7 +30,10 @@
 	&__label {
 		margin: auto auto; // centered horizontally and vertically
 		padding: $gutter-vertical/2 $gutter-horizontal/2;
-		background-color: inherit;
+		background-color: white;
+		[class*=wf-block--color] & {
+			background-color: inherit;
+		}
 		font-weight: 600;
 		text-align: center;
 	}
