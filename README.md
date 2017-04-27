@@ -17,32 +17,32 @@ A CSS framework to quickly design responsive wireframes directly in HTML.
 <link rel="stylesheet" href="css/wireframes.css" type="text/css" />
 <!-- Wireframes Javascript -->
 <script type="text/javascript" src="javascript/wireframes.js"></script>
-		…
+    …
 ```
 
 3. Compose your ergonomy by putting blocks where you want, and apply wireframe classes when needed.
 
 ``` html
 <div class="container">
-	<div class="wf-block">Header</div>
+  <div class="wf-block">Header</div>
 
-	<div class="row">
-		<div class="col">
-			<h1>
-				<span class="wf-text-lines wf-text--important">
-					Lorem ipsum dolor sit amet
-				</span>
-			</h1>
-			<p>
-				<span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient.</span>
-			</p>
-		</div>
-		<div class="col-md-4 wf-optional">
-			<div class="wf-block wf-block--fill">
-				Navigation
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="col">
+      <h1>
+        <span class="wf-text-lines wf-text--important">
+          Lorem ipsum dolor sit amet
+        </span>
+      </h1>
+      <p>
+        <span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient.</span>
+      </p>
+    </div>
+    <div class="col-md-4 wf-optional">
+      <div class="wf-block wf-block--fill">
+        Navigation
+      </div>
+    </div>
+  </div>
 </div>
 ```
 
