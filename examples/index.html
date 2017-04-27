@@ -1,3 +1,8 @@
+<!--
+	==========================
+	    Main documentation
+	==========================
+-->
 <html lang="en">
 
 <head>
@@ -8,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- ======== CSS Wireframe includes ======== -->
-	<!-- We use the Bootstrap 4 grid in this example, but the grid choice is up to you -->
+	<!-- We use the Bootstrap 4 grid in this example, but the choice is up to you -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.6/css/bootstrap-grid.min.css" type="text/css" />
 	<!-- Wireframes CSS -->
 	<link rel="stylesheet" href="../dist/css/wireframes.min.css" type="text/css" />
@@ -29,7 +34,7 @@
 
 <body>
 
-	<!-- #overview : gives a general idea of the framework possiblites at a gance -->
+	<!-- #overview : gives a general idea of the framework possiblites in a glance -->
 	<section id="overview">
 		<div class="container">
 
@@ -46,25 +51,25 @@
 						</span>
 					</h1>
 
-					<figure class="left">
-						<img src="../dist/images/ratio-4-3.png" width="120" class="wf-media" title="A media with a label">
+					<figure class="left wf-optional">
+						<span class="wf-media wf-ratio--3-4" title="An optional media with a 3/4 aspect ratio"></span>
 						<figcaption><span class="wf-text-lines">Lorem vinae</span></figcaption>
 					</figure>
 
-					<img src="../dist/images/ratio-3-4.png" width="120" class="wf-media wf-media--dark right wf-margin--left" title="Dark variant of a media">
+					<span class="wf-optional wf-width--20 wf-media wf-media--rounded wf-media--dark right wf-margin--left wf-margin--bottom" title="Optional dark rounded media with a 20% width"></span>
 
-					<p title="Dummy text" class="wf-margin--bottom-large">
-						<span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien. A interdum curabitur vestibulum vestibulum dui cursus aptent dictum litora ipsum viverra scelerisque vestibulum venenatis dictumst a. Sociosqu at et erat nulla parturient orci porttitor lorem lobortis consectetur nibh vulputate hac fames dis at a ullamcorper elementum donec.</span>
+					<p title="Dummy text" class="wf-margin--bottom--large">
+						<span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien. A interdum curabitur vestibulum vestibulum dui cursus aptent dictum litora ipsum viverra scelerisque vestibulum venenatis dictumst a. Sociosqu at et erat nulla parturient orci porttitor lorem lobortis consectetur nibh vulputate hac fames dis at a ullamcorper elementum donec. Laoreet adipiscing magna sapien. A interdum curabitur vestibulum vestibulum.</span>
 					</p>
 
 					<!-- Different types of texts : lines, block, and normal -->
-					<div class="row wf-margin--bottom-large">
-						<div class="col-md-4">
+					<div class="row wf-margin--bottom--large">
+						<div class="col-6 col-md-4">
 							<p title="Dummy text">
 								<span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum sit cras laoreet adipiscing magna sapien. <a href="#" title="A link inside a Dummy text">A commodo a parturient.</a></span>
 							</p>
 						</div>
-						<div class="col-md-4">
+						<div class="col-6 col-md-4">
 							<p class="wf-text-words" title="Dummy block text">
 								Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum sit cras laoreet adipiscing magna sapien. <a href="#" title="A link inside a Dummy text">A commodo a parturient.</a>
 							</p>
@@ -78,32 +83,32 @@
 
 					<!-- Colored variants of blocks -->
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-sm-6 col-md-4">
 							<div class="wf-block wf-block--crossed wf-block--color-dark" title="Colored block with a crossed background">
 								<span class="wf-block__label">Dark block</span>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-sm-6 col-md-4">
 							<div class="wf-block wf-block--crossed wf-block--color-light" title="Colored block with a crossed background">
 								<span class="wf-block__label">Light block</span>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-sm-6 col-md-4">
 							<div class="wf-block wf-block--crossed wf-block--color-red" title="Colored block with a crossed background">
 								<span class="wf-block__label">Red block</span>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-sm-6 col-md-4">
 							<div class="wf-block wf-block--crossed wf-block--color-green" title="Colored block with a crossed background">
 								<span class="wf-block__label">Green block</span>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-sm-6 col-md-4">
 							<div class="wf-block wf-block--crossed wf-block--color-yellow" title="Colored block with a crossed background">
 								<span class="wf-block__label">Yellow block</span>
 							</div>
 						</div>
-						<div class="col-md-4">
+						<div class="col-sm-6 col-md-4">
 							<div class="wf-block wf-block--crossed wf-block--color-pink" title="Colored block with a crossed background">
 								<span class="wf-block__label">Pink block</span>
 							</div>
@@ -139,25 +144,30 @@
 					<div class="documentation__introduction">
 						<h2 class="documentation__heading">CSS selectors naming convention</h2>
 						<p>
-							All the framework classes are prefixed with &ldquo;<strong>wf-</strong>&rdquo; : <code>wf-block</code>, <code>wf-note</code>, etc.
-							<br>Furthermore, we use the <a href="https://en.bem.info/methodology/naming-convention/">BEM naming convention</a>. It stands for <strong>B</strong>lock <strong>E</strong>lement <strong>M</strong>odifier, and in a nutshell, is a practicall way to make names of CSS selectors as informative and clear as possible. It looks like this : <code>block__element--modifier</code>.
+							All the framework classes are prefixed with <span class="big">&ldquo;<strong>wf-</strong>&rdquo;</span> : <code>wf-block</code>, <code>wf-note</code>, etc.
+							<br>Furthermore, we use the <a href="https://en.bem.info/methodology/naming-convention/">BEM naming convention</a>, which stands for <strong>B</strong>lock <strong>E</strong>lement <strong>M</strong>odifier
+							<br>In a nutshell, it's a practical way to make names of CSS selectors as informative and clear as possible. It looks like this : <code>block__element--modifier</code>.
 							<br>Use modifiers <strong>in conjonction</strong> to the basic class, like so : <code>class="wf-something wf-something--modifier"</code>.
 							<br>Please note that there's a bit a flexbox, transformations and such, so old outdated browsers are a no no!
 						</p>
 						<h2 class="documentation__heading">Color scheme</h2>
 						<p>
-							The framework is monochrome by choice : the sole purpose of a wireframe is to show the <strong>layout</strong> of the page, it should not convey any information about its theme. There are a few colored elements available, but they should only be used in very specific cases.
+							The framework is monochrome by choice : the sole purpose of a wireframe is to show the <strong>layout</strong> and the <strong>zoning</strong> of the page, it should not convey any information about its theme. There are a few colored elements available, but they should only be used in very specific cases.
 						<p>
 
 					</div>
 
 					<div class="documentation__elements">
 
-						<!-- #block -->
+						<!--
+						===============
+						    #BLOCKS
+						===============
+						-->
 						<section id="block" class="element">
 							<h2 class="element__name documentation__heading">Block</h2>
 							<!-- basic block -->
-							<label class="element__class">.wf-block</label>
+							<h3 class="element__class" id="wf-block">.wf-block</h3>
 							<p>
 								A &ldquo;block&rdquo; allow you to materialize sections of your page.
 								<br>Basically, it's just a border with a bit of padding.
@@ -175,8 +185,9 @@
 									</div>
 								</div>
 							</div>
+							
 							<!-- labelled blocks -->
-							<label class="element__class">.wf-block__label</label>
+							<h3 class="element__class" id="wf-block__label">.wf-block__label</h3>
 							<p>
 								Blocks can have a label, which is centered horizontally and vertically. When labelled, a block is supposed to contain <strong>only</strong> the label, and no other content.
 							</p>
@@ -185,7 +196,7 @@
 									<div class="col-md-4">
 										<div class="element__preview">
 											<div class="wf-block">
-												<label class="wf-block__label">A label</label>
+												<h3 class="wf-block__label">A label</h3>
 											</div>
 										</div>
 									</div>
@@ -195,8 +206,9 @@
 									</div>
 								</div>
 							</div>
+							
 							<!-- crossed block  -->
-							<label class="element__class">.wf-block</label><label class="element__class--variant">.wf-block--crossed</label>
+							<h3 class="element__class" id="wf-block__crossed">.wf-block<span class="class--variant">.wf-block--crossed</span></h3>
 							<p>
 								Add diagonals in the background.
 							</p>
@@ -213,8 +225,9 @@
 									</div>
 								</div>
 							</div>
+							
 							<!-- filler block -->
-							<label class="element__class">.wf-block</label><label class="element__class--variant">.wf-block--fill</label>
+							<h3 class="element__class" id="wf-block--fill">.wf-block<span class="class--variant">.wf-block--fill</span></h3>
 							<p>
 								Make the block fill its container.
 							</p>
@@ -231,8 +244,9 @@
 									</div>
 								</div>
 							</div>
+							
 							<!-- colored block  -->
-							<label class="element__class">.wf-block</label><label class="element__class--variant">.wf-block--color-[color name]</label>
+							<h3 class="element__class" id="wf-block--color">.wf-block<span class="class--variant">.wf-block--color-[color name]</span></h3>
 							<p>
 								Colored background to highlight some blocks : dark, light, red, green, yellow, pink.
 							</p>
@@ -256,11 +270,17 @@
 							</div>
 						</section>
 
-						<!-- #text -->
+
+						<!--
+						=============
+						    #TEXT
+						=============
+						-->
 						<section id="text" class="element">
 							<h2 class="element__name documentation__heading">Text</h2>
+							
 							<!-- Line text -->
-							<label class="element__class">.wf-text-lines</label>
+							<h3 class="element__class" id="wf-text-lines">.wf-text-lines</h3>
 							<p>
 								Makes the text more abstract and less distracting by displaying it as lines.
 								<br>It must be applied only on <strong>inline elements.</strong>
@@ -282,8 +302,9 @@
 									</div>
 								</div>
 							</div>
+							
 							<!-- Block text -->
-							<label class="element__class">.wf-text-words</label>
+							<h3 class="element__class" id="wf-text-words">.wf-text-words</h3>
 							<p>
 								Similar to line text, except each word is visible.
 								<br>Can be applied on any element.
@@ -307,102 +328,188 @@
 							</div>
 						</section>
 
-						<!-- #media -->
+
+						<!--
+						==============
+						    #MEDIA
+						==============
+						-->
 						<section id="media" class="element">
 							<h2 class="element__name documentation__heading">Media</h2>
 							<p>
-								This class turn any <code>&lt;img&gt;</code> into a placeholder media : image, audio file or video.
-								<br>Ideally the image should be transparent.
+								Use this for placeholder medias : images, audio files and videos.
+								<br>You can change its width, its aspect ratio, and use several graphical variants, see below. 
+							</p>
+							
+							<!-- media default -->
+							<h3 class="element__class" id="wf-media">.wf-media</h3>
+							<p>By default, a media is square and about 150 pixels wide.</p>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-3">
+										<div class="element__preview">
+											<span class="wf-media"></span>
+										</div>
+									</div>
+									<div class="col-md-9">
+										<pre class="element__source">
+<code>&lt;span class=&quot;wf-media&quot;&gt;&lt;/span&gt;</code></pre>
+									</div>
+								</div>
+							</div>
+							
+							<!-- media ratio -->
+							<h3 class="element__class" id="wf-ratio">.wf-media<span class="class--variant">.wf-ratio--<em>[ratio]</em></span></h3>
+							<p>You can change the aspect ratio with a helper class who provide 4 values : <code>4/3</code>, <code>3/2</code>, <code>16/9</code> and <code>2/1</code> &ndash; plus their opposite.</p>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-5">
+										<div class="element__preview">
+											<span class="wf-media wf-ratio--4-3 wf-width--20" title="4/3 aspect ratio"></span>
+											<span class="wf-media wf-ratio--3-2 wf-width--20" title="3/2 aspect ratio"></span>
+											<span class="wf-media wf-ratio--16-9 wf-width--20" title="16/9 aspect ratio"></span>
+											<span class="wf-media wf-ratio--2-1 wf-width--20" title="4/3 aspect ratio"></span>
+											<br>
+											<span class="wf-media wf-ratio--3-4 wf-width--20" title="3/4 aspect ratio"></span>
+											<span class="wf-media wf-ratio--2-3 wf-width--20" title="2/3 aspect ratio"></span>
+											<span class="wf-media wf-ratio--9-16 wf-width--20" title="9/16 aspect ratio"></span>
+											<span class="wf-media wf-ratio--1-2 wf-width--20" title="2/1 aspect ratio"></span>
+										</div>
+									</div>
+									<div class="col-md-7">
+										<pre class="element__source">
+<code>&lt;span class=&quot;wf-media wf-ratio--4-3&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-ratio--3-2&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-ratio--16-9&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-ratio--2-1&quot;&gt;&lt;/span&gt;&#10;&lt;br&gt;&#10;&lt;span class=&quot;wf-media wf-ratio--3-4&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-ratio--2-3&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-ratio--9-16&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-ratio--1-2&quot;&gt;&lt;/span&gt;</code></pre>
+									</div>
+								</div>
+							</div>
+							
+							<!-- media width -->
+							<h3 class="element__class" id="wf-width">.wf-media<span class="class--variant">.wf-width--<em>[width]</em></span></h3>
+							<p>
+								Use the helper class <code>.wf-width--<em>[width]</em></code> to set the width of medias.
+								<br>Widths are expressed as percentages, so keep in mind they are relative to their container. They go from 5% to 100% in 5% increments: 5,10,15,20,25 and so on. 
 							</p>
 							<p>
-								For convenience, there are several images provided in the <strong>images/</strong> folder, with the most common ratios : square, portrait, landscape, etc.
-								<br>In short, choose the ratio you like, put a width or a height and you're done.
+								If you really need a precise width, use instead a placeholder images service like <code>http://placehold.it</code> for instance.
 							</p>
 							<div class="element__example">
-								<div class="row align-items-center">
-									<div class="col text-center">
-										1/1 <br><img src="../dist/images/ratio-1-1.png" width="100" class="wf-media">
+								<div class="row align-items-start">
+									<div class="col-md-5">
+										<div class="element__preview">
+											<span class="wf-media wf-width--5" title="5% width"></span>
+											<span class="wf-media wf-width--10" title="10% width"></span>
+											<span class="wf-media wf-width--15" title="15% width"></span>
+											<span class="wf-media wf-width--20" title="20% width"></span>
+											<span class="wf-media wf-width--25" title="25% width"></span>
+										</div>
 									</div>
-									<div class="col text-center">
-										4/3 <br><img src="../dist/images/ratio-4-3.png" width="100" class="wf-media">
-									</div>
-									<div class="col text-center">
-										16/9 <br><img src="../dist/images/ratio-16-9.png" width="100" class="wf-media">
-									</div>
-									<div class="col text-center">
-										2/1 <br><img src="../dist/images/ratio-2-1.png" width="100" class="wf-media">
-									</div>
-									<div class="col text-center">
-										3/1 <br><img src="../dist/images/ratio-3-1.png" width="100" class="wf-media">
+									<div class="col-md-7">
+										<pre class="element__source">
+<code>&lt;span class=&quot;wf-media wf-width--5&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--10&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--15&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--20&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--25&quot;&gt;&lt;/span&gt;&#10;&lt;!-- and so on until 100 --&gt;</code></pre>
 									</div>
 								</div>
 							</div>
-							<label class="element__class">.wf-media</label>
+							
+							<!-- dark media -->
+							<h3 class="element__class" id="wf-media--dark">.wf-media<span class="class--variant">.wf-media--dark</span></h3>
+							<p>A dark background.</p>
 							<div class="element__example">
 								<div class="row align-items-start">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="element__preview">
-											<img src="../dist/images/ratio-1-1.png" width="130" class="wf-media">
+											<span class="wf-media wf-media--dark"></span>
 										</div>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-9">
 										<pre class="element__source">
-<code>&lt;img&#10;&Tab;src=&quot;images/ratio-1-1.png&quot;&#10;&Tab;width=&quot;130&quot;&#10;&Tab;class=&quot;wf-media&quot;&gt;</code></pre>
+<code>&lt;span class=&quot;wf-media wf-media--dark&quot;&gt;&lt;/span&gt;</code></pre>
 									</div>
 								</div>
 							</div>
-							<label class="element__class">.wf-media</label><label class="element__class element__class--variant">.wf-media--dark</label>
+							
+							<!-- video media -->
+							<h3 class="element__class" id="wf-media--video">.wf-media<span class="element__class class--variant">.wf-media--video</span></h3>
+							<p>A variant for video files.</p>
 							<div class="element__example">
 								<div class="row align-items-start">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="element__preview">
-											<img src="../dist/images/ratio-1-1.png" width="130" class="wf-media wf-media--dark">
+											<span class="wf-media wf-media--video"></span>
 										</div>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-9">
 										<pre class="element__source">
-<code>&lt;img&#10;&Tab;src=&quot;images/ratio-1-1.png&quot;&#10;&Tab;width=&quot;130&quot;&#10;&Tab;class=&quot;wf-media wf-media--dark&quot;&gt;</code></pre>
+<code>&lt;span class=&quot;wf-media wf-media--video&quot;&gt;&lt;/span&gt;</code></pre>
 									</div>
 								</div>
 							</div>
-							<label class="element__class">.wf-media</label><label class="element__class element__class--variant">.wf-media--video</label>
+							
+							<!-- audio media -->
+							<h3 class="element__class" id="wf-media--audio">.wf-media<span class="element__class class--variant">.wf-media--audio</span></h3>
+							<p>A variant for audio files.</p>
 							<div class="element__example">
 								<div class="row align-items-start">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="element__preview">
-											<img src="../dist/images/ratio-1-1.png" width="130" class="wf-media wf-media--video">
+											<span class="wf-media wf-media--audio"></span>
 										</div>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-9">
 										<pre class="element__source">
-<code>&lt;img&#10;&Tab;src=&quot;images/ratio-1-1.png&quot;&#10;&Tab;width=&quot;130&quot;&#10;&Tab;class=&quot;wf-media wf-media--video&quot;&gt;</code></pre>
+<code>&lt;span class=&quot;wf-media wf-media--audio&quot;&gt;&lt;/span&gt;</code></pre>
 									</div>
 								</div>
 							</div>
-							<label class="element__class">.wf-media</label><label class="element__class element__class--variant">.wf-media--audio</label>
+							
+							<!-- rounded media -->
+							<h3 class="element__class" id="wf-media--rounded">.wf-media<span class="element__class class--variant">.wf-media--rounded</span></h3>
+							<p>Round variant for portraits and such.</p>
 							<div class="element__example">
 								<div class="row align-items-start">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="element__preview">
-											<img src="../dist/images/ratio-1-1.png" width="130" class="wf-media wf-media--audio">
+											<span class="wf-media wf-media--rounded"></span>
 										</div>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-9">
 										<pre class="element__source">
-<code>&lt;img&#10;&Tab;src=&quot;images/ratio-1-1.png&quot;&#10;&Tab;width=&quot;130&quot;&#10;&Tab;class=&quot;wf-media wf-media--audio&quot;&gt;</code></pre>
+<code>&lt;span class=&quot;wf-media wf-media--round&quot;&gt;&lt;/span&gt;</code></pre>
+									</div>
+								</div>
+							</div>
+							
+							<!-- crossed media -->
+							<h3 class="element__class" id="wf-media--crossed">.wf-media<span class="element__class class--variant">.wf-media--crossed</span></h3>
+							<p>Crossed background for a simple filler.</p>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-3">
+										<div class="element__preview">
+											<span class="wf-media wf-media--crossed"></span>
+										</div>
+									</div>
+									<div class="col-md-9">
+										<pre class="element__source">
+<code>&lt;span class=&quot;wf-media wf-media--crossed&quot;&gt;&lt;/span&gt;</code></pre>
 									</div>
 								</div>
 							</div>
 						</section>
 
-						<!-- #icons -->
-						<section id="icons" class="element">
+
+						<!--
+						==============
+						    #ICONS
+						==============
+						-->
+						<section id="icon" class="element">
 							<h2 class="element__name documentation__heading">Icons</h2>
-							<label class="element__class--variant">.wf-icon--[name]</label>
+							<h3 class="element__class" id="wf-icon">.wf-icon--<em>[name]</em></h3>
 							<p>
 								Who doesn't like nice sketchy icons?
 								<br><small><a href="https://thenounproject.com/allie.fanni/collection/sketchy-wireframe/">sketchy wireframe</a> by Alice Mortaro.</small>
 							</p>
+							<pre class="element_source wf-margin--bottom"><code>&lt;span class=&quot;wf-icon--add&quot;&gt;&lt;/span&gt;</code></pre>
 							<div class="element__example">
 								<div class="element__preview">
 									<div class="row">
@@ -447,71 +554,84 @@
 							</div>
 						</section>
 
-						<!-- #note -->
+
+						<!--
+						=============
+						    #NOTE
+						=============
+						-->
 						<section id="note" class="element">
 							<h2 class="element__name documentation__heading">Note</h2>
-							<label class="element__class">.wf-note</label>
+							
+							<!-- Basic note -->
+							<h3 class="element__class" id="wf-note">.wf-note</h3>
 							<p>
-								Use notes to add comments about any elements (typically blocks). They are dispayed on the top right corner of their parent, and can be hidden.
+								Use notes to add comments about any elements (typically blocks). By default, they are located on the top right corner of their parent, and can be hidden.
 							</p>
 							<div class="element__example">
 								<div class="row align-items-start">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="element__preview">
 											<div class="wf-block wf-block--fill">
 												<div class="wf-note">A usefull comment</div>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-9">
 										<pre class="element__source">
 <code>&lt;div class=&quot;wf-note&quot;&gt;A usefull comment&lt;/div&gt;</code></pre>
 									</div>
 								</div>
 							</div>
-							<label class="element__class">.wf-note</label><label class="element__class--variant">.wf-note--top-left</label>
+							
+							<!-- Top left note -->
+							<h3 class="element__class" id="wf-note--top-left">.wf-note<span class="class--variant">.wf-note--top-left</span></h3>
 							<div class="element__example">
 								<div class="row align-items-start">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="element__preview">
 											<div class="wf-block wf-block--fill">
 												<div class="wf-note wf-note--top-left">A usefull comment</div>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-9">
 										<pre class="element__source">
 <code>&lt;div class=&quot;wf-note wf-note--top-left&quot;&gt;A usefull comment&lt;/div&gt;</code></pre>
 									</div>
 								</div>
 							</div>
-							<label class="element__class">.wf-note</label><label class="element__class--variant">.wf-note--bottom-left</label>
+							
+							<!-- Bottom left note -->
+							<h3 class="element__class" id="wf-note--bottom-left">.wf-note<span class="class--variant">.wf-note--bottom-left</span></h3>
 							<div class="element__example">
 								<div class="row align-items-start">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="element__preview">
 											<div class="wf-block wf-block--fill">
 												<div class="wf-note wf-note--bottom-left">A usefull comment</div>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-9">
 										<pre class="element__source">
 <code>&lt;div class=&quot;wf-note wf-note--bottom-left&quot;&gt;A usefull comment&lt;/div&gt;</code></pre>
 									</div>
 								</div>
 							</div>
-							<label class="element__class">.wf-note</label><label class="element__class--variant">.wf-note--bottom-right</label>
+							
+							<!-- Bottom right note -->
+							<h3 class="element__class" id="wf-note--bottom-right">.wf-note<span class="class--variant">.wf-note--bottom-right</span></h3>
 							<div class="element__example">
 								<div class="row align-items-start">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="element__preview">
 											<div class="wf-block wf-block--fill">
 												<div class="wf-note wf-note--bottom-right">A usefull comment</div>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-9">
 										<pre class="element__source">
 <code>&lt;div class=&quot;wf-note wf-note--bottom-right&quot;&gt;A usefull comment&lt;/div&gt;</code></pre>
 									</div>
@@ -519,27 +639,70 @@
 							</div>
 						</section>
 
-						<!-- #helpers -->
+
+						<!--
+						================
+						    #HELPERS
+						================
+						-->
 						<section id="helpers" class="element">
 							<h2 class="element__name documentation__heading">Helpers</h2>
-							<label class="element__class">.wf-optional</label>
+							
+							<!-- Tinytypo -->
+							<h3 id="tinytypo">Tiny Typo</h3>
 							<p>
-								Make any element optional so it can be hidden. You can display them again later with a toolbar displayed on the bottom right.
+								We use the <a href="http://tinytypo.tetue.net/">Tiny Typo CSS base</a> (it's included, you don't have to install it), and it has some neat helper classes like <code>.small</code>, <code>.big</code>, <code>.left</code>, <code>.right</code>, and such. <a href="http://tinytypo.tetue.net/tinytypo.html">Check them out!</a>
+							</p>
+							
+							<!-- Optional -->
+							<h3 class="element__class" id="wf-optional">.wf-optional</h3>
+							<p>
+								Make any element optional and hiddable. You can display them again later with a toolbar located on the bottom right of the page.
 							</p>
 							<div class="element__example">
 								<div class="row align-items-start">
-									<div class="col-md-4">
+									<div class="col-md-3">
 										<div class="element__preview">
 											<div class="wf-block wf-optional">
 												<span class="wf-block__label">I'm optional, hover me and hide me!</span>
 											</div>
 										</div>
 									</div>
-									<div class="col-md-8">
+									<div class="col-md-9">
 										<pre class="element__source">
 <code>&lt;div class=&quot;wf-block wf-optional&quot;&gt;&#10;&Tab;&lt;span class=&quot;wf-block__label&quot;&gt;I&apos;m optional, hover me and hide me&lt;/span&gt;&#10;&lt;/div&gt;</code></pre>
 									</div>
 								</div>
+							</div>
+							
+							<!-- Ratio -->
+							<h3 class="element__class">.wf-ratio--<em>[ratio]</em></h3>
+							<p>
+								Sets the aspect ratio of a block level element. Mainly usefull for <a href="#wf-ratio">medias</a>.
+							</p>
+							
+							<!-- Width -->
+							<h3 class="element__class">.wf-width--<em>[width]</em></h3>
+							<p>
+								Sets the width of a block level element. Mainly usefull for <a href="#wf-width">medias</a>.
+							</p>
+							
+							<!-- Margin -->
+							<h3 class="element__class" id="wf-margin">.wf-margin--<em>[position]</em></h3>
+							<p>
+								Sets the margins of a block level element.
+							</p>
+							<div class="element__example">
+								<pre class="element__source"><code>&lt;div class=&quot;wf-margin--top&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-margin--right&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-margin--bottom&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-margin--left&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-margin--top--large&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-margin--right--large&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-margin--bottom--large&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-margin--left--large&quot;&gt;&lt;/div&gt;</code></pre>
+							</div>
+
+							<!-- Padding -->
+							<h3 class="element__class" id="wf-padding">.wf-padding--<em>[position]</em></h3>
+							<p>
+								Sets the paddings of a block level element.
+							</p>
+							<div class="element__example">
+								<pre class="element__source"><code>&lt;div class=&quot;wf-padding--top&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-padding--right&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-padding--bottom&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-padding--left&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-padding--top--large&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-padding--right--large&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-padding--bottom--large&quot;&gt;&lt;/div&gt;&#10;&lt;div class=&quot;wf-padding--left--large&quot;&gt;&lt;/div&gt;</code></pre>
 							</div>
 						</section>
 
@@ -553,12 +716,12 @@
 						<li class="item"><a href="#text">Text</a></li>
 						<li class="item"><a href="#media">Media</a></li>
 						<li class="item"><a href="#note">Note</a></li>
+						<li class="item"><a href="#icon">Icons</a></li>
+						<li class="item"><a href="#helpers">Helpers</a></li>
 						<li class="item item--disabled"><a href="#card">Card</a></li>
 						<li class="item item--disabled"><a href="#form">Forms</a></li>
 						<li class="item item--disabled"><a href="#tabs">Tabs</a></li>
 						<li class="item item--disabled"><a href="#list">Elements list</a></li>
-						<li class="item"><a href="#icons">Icons</a></li>
-						<li class="item"><a href="#helpers">Helpers</a></li>
 					</ul>
 				</div>
 

@@ -15,31 +15,31 @@
 .wf-block.wf-margin {
 	&--all {
 		margin: $gutter-horizontal $gutter-vertical;
-		&-large {
+		&--large {
 			margin: $gutter-horizontal * 2 $gutter-vertical * 2;
 		}
 	}
 	&--left {
 		margin-left: $gutter-horizontal;
-		&-large {
+		&--large {
 			margin-left: $gutter-horizontal * 2;
 		}
 	}
 	&--top {
 		margin-top: $gutter-vertical;
-		&-large {
+		&--large {
 			margin-top: $gutter-vertical * 2;
 		}
 	}
 	&--right {
 		margin-right: $gutter-horizontal;
-		&-large {
+		&--large {
 			margin-right: $gutter-horizontal * 2;
 		}
 	}
 	&--bottom {
 		margin-bottom: $gutter-vertical;
-		&-large {
+		&--large {
 			margin-bottom: $gutter-vertical * 2;
 		}
 	}
@@ -62,31 +62,31 @@
 .wf-block.wf-padding {
 	&--all {
 		padding: $gutter-horizontal $gutter-vertical;
-		&-large {
+		&--large {
 			padding: $gutter-horizontal * 2 $gutter-vertical * 2;
 		}
 	}
 	&--left {
 		padding-left: $gutter-horizontal;
-		&-large {
+		&--large {
 			padding-left: $gutter-horizontal * 2;
 		}
 	}
 	&--top {
 		padding-top: $gutter-vertical;
-		&-large {
+		&--large {
 			padding-top: $gutter-vertical * 2;
 		}
 	}
 	&--right {
 		padding-right: $gutter-horizontal;
-		&-large {
+		&--large {
 			padding-right: $gutter-horizontal * 2;
 		}
 	}
 	&--bottom {
 		padding-bottom: $gutter-vertical;
-		&-large {
+		&--large {
 			padding-bottom: $gutter-vertical * 2;
 		}
 	}
@@ -112,7 +112,7 @@
 }
 
 /**
- * Force an aspect ratio for a block element
+ * Force an aspect ratio for a block level element
  *
  * If any, the content **must** be in a .wf-wrapper
  *
@@ -164,5 +164,22 @@
 	}
 	&--2-3 {
 		@include aspect-ratio-variant(2, 3);
+	}
+}
+
+/**
+ * Sets the width of a block level element in %
+ *
+ * @example
+ * 		<div class="wf-media wf-width--10"></div>
+ */
+.wf-width,
+[class|=wf].wf-width {
+	/* 5 to 100, in 5 increments */
+	@for $i from 1 through 20 {
+		$width: $i*5;
+		&--#{$width} {
+			width: $width + %;
+		}
 	}
 }

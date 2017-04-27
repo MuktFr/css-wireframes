@@ -3,17 +3,23 @@
  *
  * Module used to display different types of medias : images, videos, and such.
  *
- * It must be applied on an <img> tag with the ones provided in the images/ folder.
- * They are tiny transparent images with different ratios, the naming convention is ratio-[ratio].png.
- * Ratios are : 1-1, 4-3, 16-9, etc. (plus their counterpart : 3-4, 9-16, etc.).
- *
- * So to recap : choose an image according to its ratio, put a width, and its height will be deducted.
+ * By default, it is square and 100px wide
+ * You can choose its width and aspect ratio with .wf-ratio--X and .wf-width--X
  *
  * @example
  *		<img src="images/ratio-16-9.png" width=100 class="wf-media wf-media--video wf-media--dark">
  */
 .wf-media {
 
+	// By default, it is square and 100px wide
+	@include aspect-ratio-common;
+	@include aspect-ratio-variant(1, 1);
+	width: 10rem; // 158px
+	display: inline-block;
+	&[class*=ratio] {
+		display: inline-block; // force display type
+	}
+	vertical-align: baseline;
 	border: 1px solid $color-default;
 	background-image: url('../../src/images/media-image-dark.svg');
 	background-repeat: no-repeat;
@@ -46,6 +52,23 @@
 		&.wf-media--audio {
 			background-image: url('../../src/images/media-audio-light.svg');
 		}
+	}
+
+	/**
+	 * Crossed media variant
+	 */
+	&--crossed {
+		@include background-crossed;
+		&.wf-media--dark {
+			@include background-crossed(white);
+		}
+	}
+
+	/**
+	 * Round media variant
+	 */
+	&--rounded {
+		border-radius: 9999em;
 	}
 
 	/**

@@ -12,6 +12,7 @@
  *			<span class="wf-note wf-note--top-right">Something worth mentioning about this block</span>
  *		</div>
  */
+$rotation: 4deg;
 .wf-note {
 	border: 1px solid $color-external;
 	border-radius: 2px;
@@ -28,7 +29,7 @@
 	}
 	top: -0.5em;
 	right: -1em;
-	transform: rotate(4deg);
+	transform: rotate($rotation);
 	z-index: 100;
 	//font-family: $font-family-external;
 
@@ -55,7 +56,7 @@
 	&--top-left {
 		right: auto;
 		left: -1em;
-		transform: rotate(-5deg);
+		transform: rotate(-$rotation);
 	}
 	// Already default
 	&--top-right {
@@ -66,7 +67,7 @@
 		right: auto;
 		left: -1em;
 		bottom: -1em;
-		transform: rotate(-5deg);
+		transform: rotate($rotation);
 	}
 	&--bottom-right {
 		top: auto;

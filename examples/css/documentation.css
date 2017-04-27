@@ -68,12 +68,14 @@
 [class^=element__class] {
 	display: inline-block;
 	color: hsl(330, 100%, 50%);
-	margin-bottom: 0.5rem;
 	font-weight: bold;
 	font-family: monospace;
 }
-.element__class--variant {
+.class--variant {
 	color: hsl(150, 66%, 50%);
+}
+.class--variable {
+	font-style: italic;
 }
 
 /* example */
@@ -98,12 +100,12 @@ pre.element__source {
 
 /* misc */
 
-#icons .element__preview .col {
+#icon .element__preview .col {
 	text-align: center;
 	flex: 1 0 6rem;
 	margin-bottom: 1em;
 }
-#icons .element__preview small {
+#icon .element__preview small {
 	display: block;
 	color: hsl(0, 0%, 60%);
 	margin-bottom: 0.2em;
