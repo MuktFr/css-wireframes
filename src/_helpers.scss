@@ -171,15 +171,32 @@
  * Sets the width of a block level element in %
  *
  * @example
- * 		<div class="wf-media wf-width--10"></div>
+ * 		<div class="wf-media wf-width-p--10"></div>
  */
 .wf-width,
 [class|=wf].wf-width {
 	/* 5 to 100, in 5 increments */
 	@for $i from 1 through 20 {
 		$width: $i*5;
-		&--#{$width} {
+		&--#{$width}p {
 			width: $width + %;
+		}
+	}
+}
+
+/**
+ * Sets the width of a block level element in rem
+ *
+ * @example
+ * 		<div class="wf-media wf-width--10"></div>
+ */
+.wf-width,
+[class|=wf].wf-width {
+	/* 5 to 30, in 5 increments */
+	@for $i from 1 through 6 {
+		$width: $i*5;
+		&--#{$width}r {
+			width: $width + rem;
 		}
 	}
 }

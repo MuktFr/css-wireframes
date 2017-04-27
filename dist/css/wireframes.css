@@ -1387,71 +1387,99 @@ a, a:visited {
  * Sets the width of a block level element in %
  *
  * @example
- * 		<div class="wf-media wf-width--10"></div>
+ * 		<div class="wf-media wf-width-p--10"></div>
  */
 .wf-width,
 [class|=wf].wf-width {
   /* 5 to 100, in 5 increments */ }
-  .wf-width--5,
-  [class|=wf].wf-width--5 {
+  .wf-width--5p,
+  [class|=wf].wf-width--5p {
     width: 5%; }
-  .wf-width--10,
-  [class|=wf].wf-width--10 {
+  .wf-width--10p,
+  [class|=wf].wf-width--10p {
     width: 10%; }
-  .wf-width--15,
-  [class|=wf].wf-width--15 {
+  .wf-width--15p,
+  [class|=wf].wf-width--15p {
     width: 15%; }
-  .wf-width--20,
-  [class|=wf].wf-width--20 {
+  .wf-width--20p,
+  [class|=wf].wf-width--20p {
     width: 20%; }
-  .wf-width--25,
-  [class|=wf].wf-width--25 {
+  .wf-width--25p,
+  [class|=wf].wf-width--25p {
     width: 25%; }
-  .wf-width--30,
-  [class|=wf].wf-width--30 {
+  .wf-width--30p,
+  [class|=wf].wf-width--30p {
     width: 30%; }
-  .wf-width--35,
-  [class|=wf].wf-width--35 {
+  .wf-width--35p,
+  [class|=wf].wf-width--35p {
     width: 35%; }
-  .wf-width--40,
-  [class|=wf].wf-width--40 {
+  .wf-width--40p,
+  [class|=wf].wf-width--40p {
     width: 40%; }
-  .wf-width--45,
-  [class|=wf].wf-width--45 {
+  .wf-width--45p,
+  [class|=wf].wf-width--45p {
     width: 45%; }
-  .wf-width--50,
-  [class|=wf].wf-width--50 {
+  .wf-width--50p,
+  [class|=wf].wf-width--50p {
     width: 50%; }
-  .wf-width--55,
-  [class|=wf].wf-width--55 {
+  .wf-width--55p,
+  [class|=wf].wf-width--55p {
     width: 55%; }
-  .wf-width--60,
-  [class|=wf].wf-width--60 {
+  .wf-width--60p,
+  [class|=wf].wf-width--60p {
     width: 60%; }
-  .wf-width--65,
-  [class|=wf].wf-width--65 {
+  .wf-width--65p,
+  [class|=wf].wf-width--65p {
     width: 65%; }
-  .wf-width--70,
-  [class|=wf].wf-width--70 {
+  .wf-width--70p,
+  [class|=wf].wf-width--70p {
     width: 70%; }
-  .wf-width--75,
-  [class|=wf].wf-width--75 {
+  .wf-width--75p,
+  [class|=wf].wf-width--75p {
     width: 75%; }
-  .wf-width--80,
-  [class|=wf].wf-width--80 {
+  .wf-width--80p,
+  [class|=wf].wf-width--80p {
     width: 80%; }
-  .wf-width--85,
-  [class|=wf].wf-width--85 {
+  .wf-width--85p,
+  [class|=wf].wf-width--85p {
     width: 85%; }
-  .wf-width--90,
-  [class|=wf].wf-width--90 {
+  .wf-width--90p,
+  [class|=wf].wf-width--90p {
     width: 90%; }
-  .wf-width--95,
-  [class|=wf].wf-width--95 {
+  .wf-width--95p,
+  [class|=wf].wf-width--95p {
     width: 95%; }
-  .wf-width--100,
-  [class|=wf].wf-width--100 {
+  .wf-width--100p,
+  [class|=wf].wf-width--100p {
     width: 100%; }
+
+/**
+ * Sets the width of a block level element in rem
+ *
+ * @example
+ * 		<div class="wf-media wf-width--10"></div>
+ */
+.wf-width,
+[class|=wf].wf-width {
+  /* 5 to 30, in 5 increments */ }
+  .wf-width--5r,
+  [class|=wf].wf-width--5r {
+    width: 5rem; }
+  .wf-width--10r,
+  [class|=wf].wf-width--10r {
+    width: 10rem; }
+  .wf-width--15r,
+  [class|=wf].wf-width--15r {
+    width: 15rem; }
+  .wf-width--20r,
+  [class|=wf].wf-width--20r {
+    width: 20rem; }
+  .wf-width--25r,
+  [class|=wf].wf-width--25r {
+    width: 25rem; }
+  .wf-width--30r,
+  [class|=wf].wf-width--30r {
+    width: 30rem; }
 
 /* Modules */
 /* Not readable texts, just for the grey */

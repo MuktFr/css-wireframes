@@ -56,7 +56,7 @@
 						<figcaption><span class="wf-text-lines">Lorem vinae</span></figcaption>
 					</figure>
 
-					<span class="wf-optional wf-width--20 wf-media wf-media--rounded wf-media--dark right wf-margin--left wf-margin--bottom" title="Optional dark rounded media with a 20% width"></span>
+					<span class="wf-optional wf-width--20p wf-media wf-media--rounded wf-media--dark right wf-margin--left wf-margin--bottom" title="Optional dark rounded media with a 20% width"></span>
 
 					<p title="Dummy text" class="wf-margin--bottom--large">
 						<span class="wf-text-lines">Vestibulum cras condimentum dis ullamcorper mattis dictumst interdum a commodo a parturient sit cras laoreet adipiscing magna sapien. A interdum curabitur vestibulum vestibulum dui cursus aptent dictum litora ipsum viverra scelerisque vestibulum venenatis dictumst a. Sociosqu at et erat nulla parturient orci porttitor lorem lobortis consectetur nibh vulputate hac fames dis at a ullamcorper elementum donec. Laoreet adipiscing magna sapien. A interdum curabitur vestibulum vestibulum.</span>
@@ -365,15 +365,15 @@
 								<div class="row align-items-start">
 									<div class="col-md-5">
 										<div class="element__preview">
-											<span class="wf-media wf-ratio--4-3 wf-width--20" title="4/3 aspect ratio"></span>
-											<span class="wf-media wf-ratio--3-2 wf-width--20" title="3/2 aspect ratio"></span>
-											<span class="wf-media wf-ratio--16-9 wf-width--20" title="16/9 aspect ratio"></span>
-											<span class="wf-media wf-ratio--2-1 wf-width--20" title="4/3 aspect ratio"></span>
+											<span class="wf-media wf-ratio--4-3 wf-width--20p" title="4/3 aspect ratio"></span>
+											<span class="wf-media wf-ratio--3-2 wf-width--20p" title="3/2 aspect ratio"></span>
+											<span class="wf-media wf-ratio--16-9 wf-width--20p" title="16/9 aspect ratio"></span>
+											<span class="wf-media wf-ratio--2-1 wf-width--20p" title="4/3 aspect ratio"></span>
 											<br>
-											<span class="wf-media wf-ratio--3-4 wf-width--20" title="3/4 aspect ratio"></span>
-											<span class="wf-media wf-ratio--2-3 wf-width--20" title="2/3 aspect ratio"></span>
-											<span class="wf-media wf-ratio--9-16 wf-width--20" title="9/16 aspect ratio"></span>
-											<span class="wf-media wf-ratio--1-2 wf-width--20" title="2/1 aspect ratio"></span>
+											<span class="wf-media wf-ratio--3-4 wf-width--20p" title="3/4 aspect ratio"></span>
+											<span class="wf-media wf-ratio--2-3 wf-width--20p" title="2/3 aspect ratio"></span>
+											<span class="wf-media wf-ratio--9-16 wf-width--20p" title="9/16 aspect ratio"></span>
+											<span class="wf-media wf-ratio--1-2 wf-width--20p" title="2/1 aspect ratio"></span>
 										</div>
 									</div>
 									<div class="col-md-7">
@@ -387,28 +387,47 @@
 							<h3 class="element__class" id="wf-width">.wf-media<span class="class--variant">.wf-width--<em>[width]</em></span></h3>
 							<p>
 								Use the helper class <code>.wf-width--<em>[width]</em></code> to set the width of medias.
-								<br>Widths are expressed as percentages, so keep in mind they are relative to their container. They go from 5% to 100% in 5% increments: 5,10,15,20,25 and so on. 
-							</p>
-							<p>
-								If you really need a precise width, use instead a placeholder images service like <code>http://placehold.it</code> for instance.
+								<br>There are two types of width:
+								<br><span class="big">&rarr;</span> <strong>Relative width: </strong> unit is in <code>%</code> (relative to the media's container). They go from 5% to 100% in 5% increments: 5,10,15 and so on. 
+								<br>
 							</p>
 							<div class="element__example">
 								<div class="row align-items-start">
 									<div class="col-md-5">
 										<div class="element__preview">
-											<span class="wf-media wf-width--5" title="5% width"></span>
-											<span class="wf-media wf-width--10" title="10% width"></span>
-											<span class="wf-media wf-width--15" title="15% width"></span>
-											<span class="wf-media wf-width--20" title="20% width"></span>
-											<span class="wf-media wf-width--25" title="25% width"></span>
+											<span class="wf-media wf-width--5p" title="5% width"></span>
+											<span class="wf-media wf-width--10p" title="10% width"></span>
+											<span class="wf-media wf-width--15p" title="15% width"></span>
+											<span class="wf-media wf-width--20p" title="20% width"></span>
+											<span class="wf-media wf-width--25p" title="25% width"></span>
 										</div>
 									</div>
 									<div class="col-md-7">
 										<pre class="element__source">
-<code>&lt;span class=&quot;wf-media wf-width--5&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--10&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--15&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--20&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--25&quot;&gt;&lt;/span&gt;&#10;&lt;!-- and so on until 100 --&gt;</code></pre>
+<code>&lt;!-- width in % --&gt;&#10;&lt;span class=&quot;wf-media wf-width--5p&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--10p&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--15p&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--20p&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--25p&quot;&gt;&lt;/span&gt;&#10;&lt;!-- and so on until 100 --&gt;</code></pre>
 									</div>
 								</div>
 							</div>
+							</p>
+								<span class="big">&rarr;</span> <strong>Fixed width: </strong> Unit is in <code>rem</code>. They go from 5rem to 30rem in 5rem increments: 5,10,15 and so on.
+							</p>
+							<div class="element__example">
+								<div class="row align-items-start">
+									<div class="col-md-5">
+										<div class="element__preview">
+											<span class="wf-media wf-width--5r" title="5rem width"></span>
+											<span class="wf-media wf-width--10r" title="10rem width"></span>
+										</div>
+									</div>
+									<div class="col-md-7">
+										<pre class="element__source">
+<code>&lt;!-- width in rem --&gt;&#10;&lt;span class=&quot;wf-media wf-width--5r&quot;&gt;&lt;/span&gt;&#10;&lt;span class=&quot;wf-media wf-width--10r&quot;&gt;&lt;/span&gt;&#10;&lt;!-- and so on until 30 --&gt;</code></pre>
+									</div>
+								</div>
+							</div>
+							<p>
+								If you really need a pixel-precise width, use instead a placeholder image service like <code>http://placehold.it</code> for instance.
+							</p>
 							
 							<!-- dark media -->
 							<h3 class="element__class" id="wf-media--dark">.wf-media<span class="class--variant">.wf-media--dark</span></h3>
