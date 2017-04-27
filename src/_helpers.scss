@@ -200,3 +200,15 @@
 		}
 	}
 }
+
+/**
+ * Horizontal separator
+ *
+ * @example
+ *		<hr class="wf-separator">
+ */
+.wf-separator {
+	border: 1px dotted $color-default;
+	border-width: 1px 0 0;
+	margin: $gutter-vertical*2 0;
+}
