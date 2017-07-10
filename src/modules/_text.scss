@@ -2,35 +2,13 @@
 /* Not readable texts, just for the grey */
 .wf-text {
 	/**
-	 * Generate block lines
+	 * Generate text lines
 	 *
-	 * Must be apply only on inline elements
 	 * @example
-	 * 		<p><span class="wf-text-lines">Some text</span></p>
+	 * 		<p class="wf-text-lines">Some text</p>
 	 **/
 	&-lines {
-		background-color: $color-text;
-		color: transparent;
-		font-family: sans;
-		font-size: 0.5em; // Adjusted to match the main font
-		line-height: 2; // Adjusted to match the main font
-		letter-spacing: 0.2em; // compensate the font-size to keep the text length
-
-		a {
-			color: inherit;
-			background-color: saturate(darken($color-link, 5%), 20%);
-			&:hover {
-				background-color: $color-link-hover;
-			}
-			&:focus {
-				background-color: $color-important !important; // grrrr tinytypo !
-				color: $color-important !important; // grrrr tinytypo !
-			}
-		}
-
-		&.wf-text--important {
-			background-color: $color-important;
-		}
+		font-family: 'redacted';
 	}
 
 	/**
@@ -41,8 +19,8 @@
 	 * 		<div class="wf-text-words"><p>Some text</p><p>Other thing</p></div>
 	 **/
 	&-words {
-		font-family: 'blokkneue', cursive;
-		line-height: 0.95; // Adjusted to match the main font
+		font-family: 'redacted';
+		word-spacing: 0.75em;
 
 		a {
 			text-decoration: none;

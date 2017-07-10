@@ -1,6 +1,18 @@
 /**
+ * Line text
+ */
+@font-face {
+  font-family: 'redacted';
+  src: url('../../src/fonts/redacted-regular.woff2') format('woff2'),
+       url('../../src/fonts/redacted-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/**
  * Blocky font
  */
+/*
 @font-face {
   font-family: 'blokkneue';
   src: url('../../src/fonts/blokkneue-regular.woff2') format('woff2'),
@@ -8,6 +20,7 @@
   font-weight: normal;
   font-style: normal;
 }
+*/
 
 /**
  * Cursive font
