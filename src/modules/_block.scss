@@ -61,6 +61,13 @@
 	}
 
 	/**
+	 * All colored background
+	 */
+	[class*=wf-block--color]{
+		color: white;
+	}
+
+	/**
 	 * Dark background
 	 */
 	&--color-dark {
