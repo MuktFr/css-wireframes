@@ -1634,7 +1634,7 @@ a, a:visited {
   .wf-block--important {
     border: 1px solid #1c1e22;
     box-shadow: inset 0 0 0 1px #1c1e22; }
-  .wf-block [class*=wf-block--color] {
+  .wf-block [class*=wf-block--color]:not(.wf-block--color-light) {
     color: white; }
   .wf-block--color-dark {
     background-color: #676f7e;

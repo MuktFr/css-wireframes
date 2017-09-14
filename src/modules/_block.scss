@@ -63,7 +63,7 @@
 	/**
 	 * All colored background
 	 */
-	[class*=wf-block--color]{
+	[class*=wf-block--color]:not(.wf-block--color-light){
 		color: white;
 	}
 
