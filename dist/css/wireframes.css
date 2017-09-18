@@ -1731,7 +1731,7 @@ a, a:visited {
   box-shadow: -2px 2px 0 rgba(46, 92, 184, 0.1);
   display: inline-block;
   padding: 1em;
-  font-size: 0.85em;
+  font-size: 0.85rem;
   position: absolute;
   top: -0.5em;
   right: -1em;
