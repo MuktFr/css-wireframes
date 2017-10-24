@@ -1201,8 +1201,7 @@ Styleguide tinytypo.print
 
 /* '' */
 /* Base */
-body,
-[class^=wf-] {
+body {
   color: #676f7e;
   font-family: "kalam", cursive;
   font-size: 16px; }
